@@ -1,0 +1,28 @@
+Transfer started at Fri Aug 19 10:44:48 2016
+PID is 14562
+Log file is LOG_imapsync/2016_08_19_10_44_48.txt
+$RCSfile: imapsync,v $ $Revision: 1.592 $ $Date: 2014/05/22 10:03:17 $ 
+Here is a [linux] system (Linux websvr 3.13.0-77-generic #121-Ubuntu SMP Wed Jan 20 10:50:42 UTC 2016 x86_64)
+With perl 5.18.2 Mail::IMAPClient  3.35
+Command line used:
+/usr/bin/imapsync --host1 imap.mris.com --user1 miketaylor@mris.com --password1 MASKED 
+Temp directory is /tmp
+PID file is /tmp/imapsync.pid
+Modules version list:
+Mail::IMAPClient     3.35
+IO::Socket           1.36
+IO::Socket::IP       ?
+IO::Socket::INET     1.33
+IO::Socket::SSL      1.965
+Net::SSLeay          1.58
+Digest::MD5          2.52
+Digest::HMAC_MD5     1.01
+Digest::HMAC_SHA1    1.03
+Term::ReadKey        2.31
+Authen::NTLM         ?
+File::Spec           3.40
+Time::HiRes          1.9725
+URI::Escape          3.31
+Data::Uniqid         ?
+
+--host2 option is mandatory, for help run /usr/bin/imapsync --help

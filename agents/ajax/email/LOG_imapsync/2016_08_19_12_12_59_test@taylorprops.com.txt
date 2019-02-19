@@ -1,0 +1,869 @@
+Transfer started at Fri Aug 19 12:12:59 2016
+PID is 24007
+Log file is LOG_imapsync/2016_08_19_12_12_59_test@taylorprops.com.txt
+$RCSfile: imapsync,v $ $Revision: 1.592 $ $Date: 2014/05/22 10:03:17 $ 
+Here is a [linux] system (Linux websvr 3.13.0-77-generic #121-Ubuntu SMP Wed Jan 20 10:50:42 UTC 2016 x86_64)
+With perl 5.18.2 Mail::IMAPClient  3.35
+Command line used:
+/usr/bin/imapsync --host1 imap.mris.com --user1 miketaylor@mris.com --password1 MASKED --host2 mail.tpmailserver.com --user2 test@taylorprops.com --password2 MASKED
+Temp directory is /tmp
+PID file is /tmp/imapsync.pid
+Modules version list:
+Mail::IMAPClient     3.35
+IO::Socket           1.36
+IO::Socket::IP       ?
+IO::Socket::INET     1.33
+IO::Socket::SSL      1.965
+Net::SSLeay          1.58
+Digest::MD5          2.52
+Digest::HMAC_MD5     1.01
+Digest::HMAC_SHA1    1.03
+Term::ReadKey        2.31
+Authen::NTLM         ?
+File::Spec           3.40
+Time::HiRes          1.9725
+URI::Escape          3.31
+Data::Uniqid         ?
+
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Info: will try to use LOGIN authentication on host1
+Info: will try to use LOGIN authentication on host2
+Info: imap connexions timeout is 120 seconds
+Host1: IMAP server [imap.mris.com] port [143] user [miketaylor@mris.com]
+Host2: IMAP server [mail.tpmailserver.com] port [143] user [test@taylorprops.com]
+Host1: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE STARTTLS AUTH=PLAIN AUTH=TOKEN] Server ready proxy2.mail.ord1c.rsapps.net
+Host1: imap.mris.com says it has NO CAPABILITY for AUTHENTICATE LOGIN
+Host1: success login on [imap.mris.com] with user [miketaylor@mris.com] auth [LOGIN]
+Host2: * OK mail.tpmailserver.com Zimbra IMAP4rev1 server ready
+Host2: mail.tpmailserver.com says it has NO CAPABILITY for AUTHENTICATE LOGIN
+Host2: success login on [mail.tpmailserver.com] with user [test@taylorprops.com] auth [LOGIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability: IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE QUOTA
+Host2 capability: IMAP4rev1 ACL BINARY CATENATE CHILDREN CONDSTORE ENABLE ESEARCH ESORT I18NLEVEL=1 ID IDLE LIST-EXTENDED LIST-STATUS LITERAL+ LOGIN-REFERRALS MULTIAPPEND NAMESPACE QRESYNC QUOTA RIGHTS=ektx SASL-IR SEARCHRES SORT THREAD=ORDEREDSUBJECT UIDPLUS UNSELECT WITHIN XLIST
+Host1: separator given by NAMESPACE: [.]
+Host2: separator given by NAMESPACE: [/]
+Host1: prefix given by NAMESPACE: [INBOX.]
+Host2: prefix given by NAMESPACE: []
+Host1 separator and prefix: [.][INBOX.]
+Host2 separator and prefix: [/][]
+++++ Calculating sizes on Host1
+Host1 folder [INBOX]                             Size:   2989721 Messages:    44 Biggest:   1344840
+Host1 folder [INBOX.Chats]                       Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Contacts]                    Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Deleted Items]               Size:   1605212 Messages:   636 Biggest:     20590
+Host1 folder [INBOX.Deleted Messages]            Size:     19737 Messages:     2 Biggest:     10885
+Host1 folder [INBOX.Drafts]                      Size:     35504 Messages:     3 Biggest:     30767
+Host1 folder [INBOX.Emailed Contacts]            Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Sent]                        Size:  12828757 Messages:   207 Biggest:   7450014
+Host1 folder [INBOX.Trash]                       Size:   1042815 Messages:    45 Biggest:     65537
+Host1 folder [INBOX.spam]                        Size:         0 Messages:     0 Biggest:         0
+Host1 Nb messages:             937 messages
+Host1 Total size:         18521746 bytes (17.664 MiB)
+Host1 Biggest message:     7450014 bytes (7.105 MiB)
+Host1 Time spent:              5.1 seconds
+++++ Calculating sizes on Host2
+Host2 folder [Chats]                             Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Contacts]                          Size:       337 Messages:     1 Biggest:       337
+Host2 folder [Deleted Items]                     Size:     68301 Messages:    15 Biggest:     20590
+Host2 folder [Deleted Messages]                  Size:     19737 Messages:     2 Biggest:     10885
+Host2 folder [Drafts]                            Size:      4737 Messages:     2 Biggest:      3936
+Host2 folder [Emailed Contacts]                  Size:      1025 Messages:     3 Biggest:       353
+Host2 folder [INBOX]                             Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Sent]                              Size:  15193634 Messages:   210 Biggest:   7450014
+Host2 folder [Trash]                             Size:   9791479 Messages:   780 Biggest:   1344840
+Host2 folder [spam]                              Size:         0 Messages:     0 Biggest:         0
+Host2 Nb messages:            1013 messages
+Host2 Total size:         25079250 bytes (23.917 MiB)
+Host2 Biggest message:     7450014 bytes (7.105 MiB)
+Host2 Time spent:              3.2 seconds
+++++ Listing folders
+Host1 folders list:
+[INBOX]
+[INBOX.Chats]
+[INBOX.Contacts]
+[INBOX.Deleted Items]
+[INBOX.Deleted Messages]
+[INBOX.Drafts]
+[INBOX.Emailed Contacts]
+[INBOX.Junk]
+[INBOX.Sent]
+[INBOX.Trash]
+[INBOX.spam]
+
+Host2 folders list:
+[Chats]
+[Comments]
+[Contacts]
+[Deleted Items]
+[Deleted Messages]
+[Drafts]
+[Emailed Contacts]
+[INBOX]
+[INBOX/folder2]
+[INBOX/folder2/subfolder]
+[Junk]
+[Sent]
+[Trash]
+[Trash/folder2]
+[spam]
+
+Folders in host2 not in host1:
+[Trash/folder2]
+[INBOX/folder2/subfolder]
+[INBOX/folder2]
+[Comments]
+
+++++ Looping on each folder
+[INBOX]                             -> [INBOX]                            
+msg INBOX/48 {1344840}        copied to INBOX/2524       0.35 msgs/s  454.679 KiB/s  ETA: Fri Aug 19 12:58:15 2016  2704 s  936 msgs left
+msg INBOX/49 {20325}          copied to INBOX/2525       0.62 msgs/s  411.597 KiB/s  ETA: Fri Aug 19 12:38:26 2016  1514 s  935 msgs left
+msg INBOX/50 {8126}           copied to INBOX/2526       0.84 msgs/s  377.001 KiB/s  ETA: Fri Aug 19 12:31:40 2016  1108 s  934 msgs left
+msg INBOX/51 {21392}          copied to INBOX/2527       1.02 msgs/s  346.933 KiB/s  ETA: Fri Aug 19 12:28:28 2016  916 s  933 msgs left
+msg INBOX/52 {3947}           copied to INBOX/2528       1.19 msgs/s  323.763 KiB/s  ETA: Fri Aug 19 12:26:19 2016  786 s  932 msgs left
+msg INBOX/53 {12644}          copied to INBOX/2529       1.32 msgs/s  303.167 KiB/s  ETA: Fri Aug 19 12:24:59 2016  705 s  931 msgs left
+msg INBOX/54 {24037}          copied to INBOX/2530       1.42 msgs/s  285.330 KiB/s  ETA: Fri Aug 19 12:24:06 2016  653 s  930 msgs left
+msg INBOX/55 {24223}          copied to INBOX/2531       1.50 msgs/s  267.413 KiB/s  ETA: Fri Aug 19 12:23:33 2016  619 s  929 msgs left
+msg INBOX/56 {23625}          copied to INBOX/2532       1.55 msgs/s  249.842 KiB/s  ETA: Fri Aug 19 12:23:12 2016  598 s  928 msgs left
+msg INBOX/57 {22047}          copied to INBOX/2533       1.61 msgs/s  236.438 KiB/s  ETA: Fri Aug 19 12:22:51 2016  576 s  927 msgs left
+msg INBOX/58 {27301}          copied to INBOX/2534       1.66 msgs/s  225.331 KiB/s  ETA: Fri Aug 19 12:22:35 2016  559 s  926 msgs left
+msg INBOX/59 {7952}           copied to INBOX/2535       1.72 msgs/s  216.061 KiB/s  ETA: Fri Aug 19 12:22:12 2016  537 s  925 msgs left
+msg INBOX/60 {3312}           copied to INBOX/2536       1.79 msgs/s  208.059 KiB/s  ETA: Fri Aug 19 12:21:51 2016  515 s  924 msgs left
+msg INBOX/61 {3429}           copied to INBOX/2537       1.85 msgs/s  199.989 KiB/s  ETA: Fri Aug 19 12:21:34 2016  498 s  923 msgs left
+msg INBOX/62 {8762}           copied to INBOX/2538       1.90 msgs/s  192.932 KiB/s  ETA: Fri Aug 19 12:21:21 2016  484 s  922 msgs left
+msg INBOX/63 {7878}           copied to INBOX/2539       1.96 msgs/s  186.843 KiB/s  ETA: Fri Aug 19 12:21:07 2016  470 s  921 msgs left
+msg INBOX/64 {8010}           copied to INBOX/2540       2.00 msgs/s  180.586 KiB/s  ETA: Fri Aug 19 12:20:57 2016  460 s  920 msgs left
+msg INBOX/65 {8134}           copied to INBOX/2541       2.04 msgs/s  175.165 KiB/s  ETA: Fri Aug 19 12:20:47 2016  450 s  919 msgs left
+msg INBOX/66 {67966}          copied to INBOX/2542       2.02 msgs/s  171.171 KiB/s  ETA: Fri Aug 19 12:20:52 2016  454 s  918 msgs left
+msg INBOX/67 {67966}          copied to INBOX/2543       1.96 msgs/s  164.099 KiB/s  ETA: Fri Aug 19 12:21:07 2016  468 s  917 msgs left
+msg INBOX/68 {67980}          copied to INBOX/2544       1.94 msgs/s  161.118 KiB/s  ETA: Fri Aug 19 12:21:11 2016  472 s  916 msgs left
+msg INBOX/69 {87628}          copied to INBOX/2545       1.89 msgs/s  157.131 KiB/s  ETA: Fri Aug 19 12:21:24 2016  484 s  915 msgs left
+msg INBOX/70 {11694}          copied to INBOX/2546       1.93 msgs/s  154.356 KiB/s  ETA: Fri Aug 19 12:21:14 2016  473 s  914 msgs left
+msg INBOX/71 {26952}          copied to INBOX/2547       1.96 msgs/s  151.966 KiB/s  ETA: Fri Aug 19 12:21:08 2016  467 s  913 msgs left
+msg INBOX/72 {52650}          copied to INBOX/2548       1.96 msgs/s  150.030 KiB/s  ETA: Fri Aug 19 12:21:08 2016  466 s  912 msgs left
+msg INBOX/73 {53018}          copied to INBOX/2549       1.97 msgs/s  149.407 KiB/s  ETA: Fri Aug 19 12:21:04 2016  462 s  911 msgs left
+msg INBOX/74 {63116}          copied to INBOX/2550       1.98 msgs/s  148.622 KiB/s  ETA: Fri Aug 19 12:21:03 2016  460 s  910 msgs left
+msg INBOX/75 {13950}          copied to INBOX/2551       2.00 msgs/s  146.073 KiB/s  ETA: Fri Aug 19 12:20:57 2016  454 s  909 msgs left
+msg INBOX/76 {17625}          copied to INBOX/2552       2.01 msgs/s  143.161 KiB/s  ETA: Fri Aug 19 12:20:54 2016  451 s  908 msgs left
+msg INBOX/77 {75835}          copied to INBOX/2553       1.99 msgs/s  141.878 KiB/s  ETA: Fri Aug 19 12:20:59 2016  455 s  907 msgs left
+msg INBOX/78 {29538}          copied to INBOX/2555       2.00 msgs/s  139.680 KiB/s  ETA: Fri Aug 19 12:20:57 2016  453 s  906 msgs left
+msg INBOX/79 {52156}          copied to INBOX/2557       2.00 msgs/s  138.269 KiB/s  ETA: Fri Aug 19 12:20:58 2016  453 s  905 msgs left
+msg INBOX/80 {8082}           copied to INBOX/2559       2.02 msgs/s  136.207 KiB/s  ETA: Fri Aug 19 12:20:52 2016  447 s  904 msgs left
+msg INBOX/81 {15740}          copied to INBOX/2561       2.04 msgs/s  134.593 KiB/s  ETA: Fri Aug 19 12:20:47 2016  442 s  903 msgs left
+msg INBOX/82 {249903}         copied to INBOX/2563       1.97 msgs/s  139.419 KiB/s  ETA: Fri Aug 19 12:21:05 2016  459 s  902 msgs left
+msg INBOX/83 {2630}           copied to INBOX/2565       1.99 msgs/s  137.487 KiB/s  ETA: Fri Aug 19 12:20:59 2016  452 s  901 msgs left
+msg INBOX/84 {16094}          copied to INBOX/2567       2.01 msgs/s  135.779 KiB/s  ETA: Fri Aug 19 12:20:55 2016  448 s  900 msgs left
+msg INBOX/85 {187688}         copied to INBOX/2569       1.97 msgs/s  139.171 KiB/s  ETA: Fri Aug 19 12:21:04 2016  456 s  899 msgs left
+msg INBOX/86 {188820}         copied to INBOX/2570       1.93 msgs/s  142.275 KiB/s  ETA: Fri Aug 19 12:21:13 2016  464 s  898 msgs left
+msg INBOX/87 {7144}           copied to INBOX/2571       1.95 msgs/s  140.459 KiB/s  ETA: Fri Aug 19 12:21:08 2016  459 s  897 msgs left
+msg INBOX/88 {10099}          copied to INBOX/2573       1.97 msgs/s  138.796 KiB/s  ETA: Fri Aug 19 12:21:04 2016  454 s  896 msgs left
+msg INBOX/89 {10388}          copied to INBOX/2574       1.99 msgs/s  136.962 KiB/s  ETA: Fri Aug 19 12:21:00 2016  450 s  895 msgs left
+msg INBOX/90 {14332}          copied to INBOX/2575       2.00 msgs/s  135.591 KiB/s  ETA: Fri Aug 19 12:20:56 2016  446 s  894 msgs left
+msg INBOX/91 {10743}          copied to INBOX/2576       2.02 msgs/s  134.094 KiB/s  ETA: Fri Aug 19 12:20:52 2016  442 s  893 msgs left
+[INBOX.Chats]                       -> [Chats]                            
+[INBOX.Contacts]                    -> [Contacts]                         
+Host2 uid 285 no header by parse_headers so taking whole header with BODY.PEEK[HEADER]
+Host2 Contacts/285 size 337 ignored (no wanted headers so we ignore this message)
+[INBOX.Deleted Items]               -> [Deleted Items]                    
+msg INBOX.Deleted Items/2 {2385}            copied to Deleted Items/2577       1.82 msgs/s  118.011 KiB/s  ETA: Fri Aug 19 12:21:44 2016  490 s  891 msgs left
+msg INBOX.Deleted Items/3 {2441}            copied to Deleted Items/2578       1.84 msgs/s  116.843 KiB/s  ETA: Fri Aug 19 12:21:38 2016  484 s  890 msgs left
+msg INBOX.Deleted Items/4 {1388}            copied to Deleted Items/2580       1.86 msgs/s  115.551 KiB/s  ETA: Fri Aug 19 12:21:33 2016  479 s  889 msgs left
+msg INBOX.Deleted Items/5 {1422}            copied to Deleted Items/2581       1.88 msgs/s  114.350 KiB/s  ETA: Fri Aug 19 12:21:28 2016  474 s  888 msgs left
+msg INBOX.Deleted Items/6 {2714}            copied to Deleted Items/2582       1.89 msgs/s  113.205 KiB/s  ETA: Fri Aug 19 12:21:23 2016  468 s  887 msgs left
+msg INBOX.Deleted Items/7 {1522}            copied to Deleted Items/2583       1.90 msgs/s  111.106 KiB/s  ETA: Fri Aug 19 12:21:23 2016  467 s  886 msgs left
+msg INBOX.Deleted Items/8 {1396}            copied to Deleted Items/2585       1.91 msgs/s  109.702 KiB/s  ETA: Fri Aug 19 12:21:19 2016  464 s  885 msgs left
+msg INBOX.Deleted Items/9 {2716}            copied to Deleted Items/2586       1.93 msgs/s  108.662 KiB/s  ETA: Fri Aug 19 12:21:15 2016  459 s  884 msgs left
+msg INBOX.Deleted Items/10 {3071}           copied to Deleted Items/2587       1.94 msgs/s  107.410 KiB/s  ETA: Fri Aug 19 12:21:12 2016  456 s  883 msgs left
+msg INBOX.Deleted Items/11 {2397}           copied to Deleted Items/2588       1.95 msgs/s  106.225 KiB/s  ETA: Fri Aug 19 12:21:09 2016  452 s  882 msgs left
+msg INBOX.Deleted Items/12 {2716}           copied to Deleted Items/2589       1.96 msgs/s  105.112 KiB/s  ETA: Fri Aug 19 12:21:05 2016  449 s  881 msgs left
+msg INBOX.Deleted Items/13 {2490}           copied to Deleted Items/2590       1.98 msgs/s  104.075 KiB/s  ETA: Fri Aug 19 12:21:02 2016  445 s  880 msgs left
+msg INBOX.Deleted Items/14 {2805}           copied to Deleted Items/2591       1.99 msgs/s  103.101 KiB/s  ETA: Fri Aug 19 12:20:58 2016  441 s  879 msgs left
+msg INBOX.Deleted Items/15 {3286}           copied to Deleted Items/2592       2.01 msgs/s  102.172 KiB/s  ETA: Fri Aug 19 12:20:55 2016  437 s  878 msgs left
+msg INBOX.Deleted Items/16 {2924}           copied to Deleted Items/2593       2.02 msgs/s  101.296 KiB/s  ETA: Fri Aug 19 12:20:52 2016  434 s  877 msgs left
+msg INBOX.Deleted Items/17 {3282}           copied to Deleted Items/2594       2.04 msgs/s  100.398 KiB/s  ETA: Fri Aug 19 12:20:48 2016  430 s  876 msgs left
+msg INBOX.Deleted Items/18 {2591}           copied to Deleted Items/2595       2.05 msgs/s  99.526 KiB/s  ETA: Fri Aug 19 12:20:45 2016  427 s  875 msgs left
+msg INBOX.Deleted Items/19 {2438}           copied to Deleted Items/2596       2.07 msgs/s  98.688 KiB/s  ETA: Fri Aug 19 12:20:42 2016  423 s  874 msgs left
+msg INBOX.Deleted Items/20 {1440}           copied to Deleted Items/2597       2.08 msgs/s  97.866 KiB/s  ETA: Fri Aug 19 12:20:39 2016  420 s  873 msgs left
+msg INBOX.Deleted Items/21 {2452}           copied to Deleted Items/2598       2.09 msgs/s  97.002 KiB/s  ETA: Fri Aug 19 12:20:36 2016  417 s  872 msgs left
+msg INBOX.Deleted Items/22 {2962}           copied to Deleted Items/2599       2.10 msgs/s  96.151 KiB/s  ETA: Fri Aug 19 12:20:33 2016  414 s  871 msgs left
+msg INBOX.Deleted Items/23 {2717}           copied to Deleted Items/2600       2.11 msgs/s  95.157 KiB/s  ETA: Fri Aug 19 12:20:32 2016  412 s  870 msgs left
+msg INBOX.Deleted Items/24 {2536}           copied to Deleted Items/2601       2.13 msgs/s  94.349 KiB/s  ETA: Fri Aug 19 12:20:29 2016  409 s  869 msgs left
+msg INBOX.Deleted Items/25 {2478}           copied to Deleted Items/2602       2.14 msgs/s  93.632 KiB/s  ETA: Fri Aug 19 12:20:26 2016  406 s  868 msgs left
+msg INBOX.Deleted Items/26 {2479}           copied to Deleted Items/2603       2.15 msgs/s  92.903 KiB/s  ETA: Fri Aug 19 12:20:24 2016  403 s  867 msgs left
+msg INBOX.Deleted Items/27 {2515}           copied to Deleted Items/2604       2.16 msgs/s  92.121 KiB/s  ETA: Fri Aug 19 12:20:22 2016  400 s  866 msgs left
+msg INBOX.Deleted Items/28 {2522}           copied to Deleted Items/2605       2.17 msgs/s  91.318 KiB/s  ETA: Fri Aug 19 12:20:20 2016  398 s  865 msgs left
+msg INBOX.Deleted Items/29 {2591}           copied to Deleted Items/2606       2.18 msgs/s  90.593 KiB/s  ETA: Fri Aug 19 12:20:17 2016  396 s  864 msgs left
+msg INBOX.Deleted Items/30 {3270}           copied to Deleted Items/2607       2.19 msgs/s  89.809 KiB/s  ETA: Fri Aug 19 12:20:16 2016  394 s  863 msgs left
+msg INBOX.Deleted Items/31 {3038}           copied to Deleted Items/2608       2.21 msgs/s  89.182 KiB/s  ETA: Fri Aug 19 12:20:13 2016  391 s  862 msgs left
+msg INBOX.Deleted Items/32 {2817}           copied to Deleted Items/2609       2.22 msgs/s  88.513 KiB/s  ETA: Fri Aug 19 12:20:11 2016  389 s  861 msgs left
+msg INBOX.Deleted Items/33 {2819}           copied to Deleted Items/2610       2.23 msgs/s  87.857 KiB/s  ETA: Fri Aug 19 12:20:09 2016  386 s  860 msgs left
+msg INBOX.Deleted Items/34 {2462}           copied to Deleted Items/2611       2.23 msgs/s  87.075 KiB/s  ETA: Fri Aug 19 12:20:08 2016  384 s  859 msgs left
+msg INBOX.Deleted Items/35 {2477}           copied to Deleted Items/2612       2.24 msgs/s  86.404 KiB/s  ETA: Fri Aug 19 12:20:06 2016  382 s  858 msgs left
+msg INBOX.Deleted Items/36 {2596}           copied to Deleted Items/2613       2.26 msgs/s  85.814 KiB/s  ETA: Fri Aug 19 12:20:04 2016  380 s  857 msgs left
+msg INBOX.Deleted Items/37 {2471}           copied to Deleted Items/2614       2.27 msgs/s  85.216 KiB/s  ETA: Fri Aug 19 12:20:02 2016  378 s  856 msgs left
+msg INBOX.Deleted Items/38 {2225}           copied to Deleted Items/2615       2.28 msgs/s  84.632 KiB/s  ETA: Fri Aug 19 12:20:00 2016  375 s  855 msgs left
+msg INBOX.Deleted Items/39 {2695}           copied to Deleted Items/2617       2.29 msgs/s  84.039 KiB/s  ETA: Fri Aug 19 12:19:58 2016  373 s  854 msgs left
+msg INBOX.Deleted Items/40 {2695}           copied to Deleted Items/2618       2.29 msgs/s  83.374 KiB/s  ETA: Fri Aug 19 12:19:57 2016  372 s  853 msgs left
+msg INBOX.Deleted Items/41 {3033}           copied to Deleted Items/2619       2.30 msgs/s  82.802 KiB/s  ETA: Fri Aug 19 12:19:55 2016  370 s  852 msgs left
+msg INBOX.Deleted Items/42 {2530}           copied to Deleted Items/2620       2.31 msgs/s  82.212 KiB/s  ETA: Fri Aug 19 12:19:53 2016  368 s  851 msgs left
+msg INBOX.Deleted Items/43 {2472}           copied to Deleted Items/2621       2.32 msgs/s  81.661 KiB/s  ETA: Fri Aug 19 12:19:52 2016  366 s  850 msgs left
+msg INBOX.Deleted Items/44 {2538}           copied to Deleted Items/2622       2.33 msgs/s  81.124 KiB/s  ETA: Fri Aug 19 12:19:50 2016  364 s  849 msgs left
+msg INBOX.Deleted Items/45 {2450}           copied to Deleted Items/2623       2.34 msgs/s  80.481 KiB/s  ETA: Fri Aug 19 12:19:49 2016  363 s  848 msgs left
+msg INBOX.Deleted Items/46 {2604}           copied to Deleted Items/2624       2.35 msgs/s  79.929 KiB/s  ETA: Fri Aug 19 12:19:48 2016  361 s  847 msgs left
+msg INBOX.Deleted Items/47 {2544}           copied to Deleted Items/2625       2.36 msgs/s  79.398 KiB/s  ETA: Fri Aug 19 12:19:46 2016  359 s  846 msgs left
+msg INBOX.Deleted Items/48 {2489}           copied to Deleted Items/2626       2.36 msgs/s  78.875 KiB/s  ETA: Fri Aug 19 12:19:45 2016  357 s  845 msgs left
+msg INBOX.Deleted Items/49 {2604}           copied to Deleted Items/2627       2.37 msgs/s  78.339 KiB/s  ETA: Fri Aug 19 12:19:43 2016  356 s  844 msgs left
+msg INBOX.Deleted Items/50 {2934}           copied to Deleted Items/2628       2.38 msgs/s  77.773 KiB/s  ETA: Fri Aug 19 12:19:42 2016  354 s  843 msgs left
+msg INBOX.Deleted Items/51 {2961}           copied to Deleted Items/2629       2.39 msgs/s  77.238 KiB/s  ETA: Fri Aug 19 12:19:41 2016  353 s  842 msgs left
+msg INBOX.Deleted Items/52 {2384}           copied to Deleted Items/2630       2.39 msgs/s  76.724 KiB/s  ETA: Fri Aug 19 12:19:40 2016  351 s  841 msgs left
+msg INBOX.Deleted Items/53 {2459}           copied to Deleted Items/2631       2.40 msgs/s  76.223 KiB/s  ETA: Fri Aug 19 12:19:39 2016  350 s  840 msgs left
+msg INBOX.Deleted Items/54 {2619}           copied to Deleted Items/2632       2.41 msgs/s  75.795 KiB/s  ETA: Fri Aug 19 12:19:37 2016  348 s  839 msgs left
+msg INBOX.Deleted Items/55 {2695}           copied to Deleted Items/2633       2.42 msgs/s  75.360 KiB/s  ETA: Fri Aug 19 12:19:36 2016  347 s  838 msgs left
+msg INBOX.Deleted Items/56 {2394}           copied to Deleted Items/2634       2.43 msgs/s  74.918 KiB/s  ETA: Fri Aug 19 12:19:34 2016  345 s  837 msgs left
+msg INBOX.Deleted Items/57 {2667}           copied to Deleted Items/2635       2.43 msgs/s  74.388 KiB/s  ETA: Fri Aug 19 12:19:34 2016  344 s  836 msgs left
+msg INBOX.Deleted Items/58 {2741}           copied to Deleted Items/2636       2.44 msgs/s  73.929 KiB/s  ETA: Fri Aug 19 12:19:33 2016  342 s  835 msgs left
+msg INBOX.Deleted Items/59 {16047}          copied to Deleted Items/2637       2.44 msgs/s  73.591 KiB/s  ETA: Fri Aug 19 12:19:33 2016  342 s  834 msgs left
+msg INBOX.Deleted Items/60 {2902}           copied to Deleted Items/2639       2.45 msgs/s  73.164 KiB/s  ETA: Fri Aug 19 12:19:31 2016  340 s  833 msgs left
+msg INBOX.Deleted Items/61 {2920}           copied to Deleted Items/2640       2.45 msgs/s  72.728 KiB/s  ETA: Fri Aug 19 12:19:30 2016  339 s  832 msgs left
+msg INBOX.Deleted Items/62 {1914}           copied to Deleted Items/2642       2.46 msgs/s  72.285 KiB/s  ETA: Fri Aug 19 12:19:29 2016  338 s  831 msgs left
+msg INBOX.Deleted Items/63 {3186}           copied to Deleted Items/2644       2.47 msgs/s  71.893 KiB/s  ETA: Fri Aug 19 12:19:28 2016  336 s  830 msgs left
+msg INBOX.Deleted Items/64 {2546}           copied to Deleted Items/2645       2.47 msgs/s  71.478 KiB/s  ETA: Fri Aug 19 12:19:27 2016  335 s  829 msgs left
+msg INBOX.Deleted Items/65 {2621}           copied to Deleted Items/2646       2.48 msgs/s  71.046 KiB/s  ETA: Fri Aug 19 12:19:26 2016  334 s  828 msgs left
+msg INBOX.Deleted Items/66 {2865}           copied to Deleted Items/2647       2.49 msgs/s  70.659 KiB/s  ETA: Fri Aug 19 12:19:25 2016  332 s  827 msgs left
+msg INBOX.Deleted Items/67 {2467}           copied to Deleted Items/2648       2.49 msgs/s  70.257 KiB/s  ETA: Fri Aug 19 12:19:24 2016  331 s  826 msgs left
+msg INBOX.Deleted Items/68 {1498}           copied to Deleted Items/2649       2.50 msgs/s  69.851 KiB/s  ETA: Fri Aug 19 12:19:23 2016  330 s  825 msgs left
+msg INBOX.Deleted Items/69 {2864}           copied to Deleted Items/2651       2.51 msgs/s  69.481 KiB/s  ETA: Fri Aug 19 12:19:22 2016  329 s  824 msgs left
+msg INBOX.Deleted Items/70 {1858}           copied to Deleted Items/2652       2.51 msgs/s  69.082 KiB/s  ETA: Fri Aug 19 12:19:21 2016  327 s  823 msgs left
+msg INBOX.Deleted Items/71 {2661}           copied to Deleted Items/2654       2.52 msgs/s  68.707 KiB/s  ETA: Fri Aug 19 12:19:20 2016  326 s  822 msgs left
+msg INBOX.Deleted Items/72 {1426}           copied to Deleted Items/2655       2.53 msgs/s  68.309 KiB/s  ETA: Fri Aug 19 12:19:19 2016  325 s  821 msgs left
+msg INBOX.Deleted Items/73 {1442}           copied to Deleted Items/2656       2.53 msgs/s  67.924 KiB/s  ETA: Fri Aug 19 12:19:18 2016  324 s  820 msgs left
+msg INBOX.Deleted Items/74 {1873}           copied to Deleted Items/2657       2.54 msgs/s  67.447 KiB/s  ETA: Fri Aug 19 12:19:18 2016  323 s  819 msgs left
+msg INBOX.Deleted Items/75 {1392}           copied to Deleted Items/2659       2.54 msgs/s  67.065 KiB/s  ETA: Fri Aug 19 12:19:17 2016  322 s  818 msgs left
+msg INBOX.Deleted Items/76 {1428}           copied to Deleted Items/2660       2.55 msgs/s  66.699 KiB/s  ETA: Fri Aug 19 12:19:16 2016  321 s  817 msgs left
+msg INBOX.Deleted Items/77 {3053}           copied to Deleted Items/2661       2.55 msgs/s  66.357 KiB/s  ETA: Fri Aug 19 12:19:15 2016  319 s  816 msgs left
+msg INBOX.Deleted Items/78 {2819}           copied to Deleted Items/2662       2.56 msgs/s  66.028 KiB/s  ETA: Fri Aug 19 12:19:14 2016  318 s  815 msgs left
+msg INBOX.Deleted Items/79 {2467}           copied to Deleted Items/2663       2.57 msgs/s  65.674 KiB/s  ETA: Fri Aug 19 12:19:14 2016  317 s  814 msgs left
+msg INBOX.Deleted Items/80 {2464}           copied to Deleted Items/2664       2.57 msgs/s  65.334 KiB/s  ETA: Fri Aug 19 12:19:13 2016  316 s  813 msgs left
+msg INBOX.Deleted Items/81 {2481}           copied to Deleted Items/2665       2.58 msgs/s  65.008 KiB/s  ETA: Fri Aug 19 12:19:12 2016  315 s  812 msgs left
+msg INBOX.Deleted Items/82 {2575}           copied to Deleted Items/2666       2.58 msgs/s  64.533 KiB/s  ETA: Fri Aug 19 12:19:12 2016  315 s  811 msgs left
+msg INBOX.Deleted Items/83 {2474}           copied to Deleted Items/2667       2.58 msgs/s  64.227 KiB/s  ETA: Fri Aug 19 12:19:11 2016  313 s  810 msgs left
+msg INBOX.Deleted Items/84 {3053}           copied to Deleted Items/2668       2.59 msgs/s  63.915 KiB/s  ETA: Fri Aug 19 12:19:10 2016  312 s  809 msgs left
+msg INBOX.Deleted Items/85 {2460}           copied to Deleted Items/2669       2.59 msgs/s  63.586 KiB/s  ETA: Fri Aug 19 12:19:10 2016  311 s  808 msgs left
+msg INBOX.Deleted Items/86 {2694}           copied to Deleted Items/2670       2.59 msgs/s  63.128 KiB/s  ETA: Fri Aug 19 12:19:10 2016  311 s  807 msgs left
+msg INBOX.Deleted Items/87 {2550}           copied to Deleted Items/2671       2.60 msgs/s  62.828 KiB/s  ETA: Fri Aug 19 12:19:09 2016  310 s  806 msgs left
+msg INBOX.Deleted Items/88 {2481}           copied to Deleted Items/2672       2.60 msgs/s  62.541 KiB/s  ETA: Fri Aug 19 12:19:08 2016  309 s  805 msgs left
+msg INBOX.Deleted Items/89 {2602}           copied to Deleted Items/2673       2.61 msgs/s  62.248 KiB/s  ETA: Fri Aug 19 12:19:07 2016  308 s  804 msgs left
+msg INBOX.Deleted Items/90 {1417}           copied to Deleted Items/2674       2.61 msgs/s  61.758 KiB/s  ETA: Fri Aug 19 12:19:08 2016  308 s  803 msgs left
+msg INBOX.Deleted Items/91 {2852}           copied to Deleted Items/2675       2.61 msgs/s  61.417 KiB/s  ETA: Fri Aug 19 12:19:07 2016  307 s  802 msgs left
+msg INBOX.Deleted Items/92 {2465}           copied to Deleted Items/2676       2.62 msgs/s  61.135 KiB/s  ETA: Fri Aug 19 12:19:07 2016  306 s  801 msgs left
+msg INBOX.Deleted Items/93 {2463}           copied to Deleted Items/2677       2.61 msgs/s  60.624 KiB/s  ETA: Fri Aug 19 12:19:07 2016  306 s  800 msgs left
+msg INBOX.Deleted Items/94 {2474}           copied to Deleted Items/2678       2.62 msgs/s  60.349 KiB/s  ETA: Fri Aug 19 12:19:06 2016  305 s  799 msgs left
+msg INBOX.Deleted Items/95 {2883}           copied to Deleted Items/2679       2.62 msgs/s  60.078 KiB/s  ETA: Fri Aug 19 12:19:06 2016  304 s  798 msgs left
+msg INBOX.Deleted Items/96 {2454}           copied to Deleted Items/2680       2.63 msgs/s  59.809 KiB/s  ETA: Fri Aug 19 12:19:05 2016  303 s  797 msgs left
+msg INBOX.Deleted Items/97 {2699}           copied to Deleted Items/2681       2.63 msgs/s  59.502 KiB/s  ETA: Fri Aug 19 12:19:05 2016  303 s  796 msgs left
+msg INBOX.Deleted Items/98 {2399}           copied to Deleted Items/2682       2.64 msgs/s  59.228 KiB/s  ETA: Fri Aug 19 12:19:04 2016  302 s  795 msgs left
+msg INBOX.Deleted Items/99 {1699}           copied to Deleted Items/2683       2.64 msgs/s  58.953 KiB/s  ETA: Fri Aug 19 12:19:03 2016  301 s  794 msgs left
+msg INBOX.Deleted Items/100 {2443}          copied to Deleted Items/2685       2.65 msgs/s  58.697 KiB/s  ETA: Fri Aug 19 12:19:03 2016  300 s  793 msgs left
+msg INBOX.Deleted Items/101 {2485}          copied to Deleted Items/2686       2.65 msgs/s  58.379 KiB/s  ETA: Fri Aug 19 12:19:02 2016  299 s  792 msgs left
+msg INBOX.Deleted Items/102 {2638}          copied to Deleted Items/2687       2.65 msgs/s  58.133 KiB/s  ETA: Fri Aug 19 12:19:02 2016  298 s  791 msgs left
+msg INBOX.Deleted Items/103 {2472}          copied to Deleted Items/2688       2.66 msgs/s  57.883 KiB/s  ETA: Fri Aug 19 12:19:01 2016  297 s  790 msgs left
+msg INBOX.Deleted Items/104 {1528}          copied to Deleted Items/2689       2.66 msgs/s  57.621 KiB/s  ETA: Fri Aug 19 12:19:00 2016  296 s  789 msgs left
+msg INBOX.Deleted Items/105 {2552}          copied to Deleted Items/2691       2.67 msgs/s  57.354 KiB/s  ETA: Fri Aug 19 12:19:00 2016  296 s  788 msgs left
+msg INBOX.Deleted Items/106 {1538}          copied to Deleted Items/2692       2.67 msgs/s  57.104 KiB/s  ETA: Fri Aug 19 12:18:59 2016  295 s  787 msgs left
+msg INBOX.Deleted Items/107 {1489}          copied to Deleted Items/2694       2.67 msgs/s  56.740 KiB/s  ETA: Fri Aug 19 12:18:59 2016  294 s  786 msgs left
+msg INBOX.Deleted Items/108 {1495}          copied to Deleted Items/2696       2.67 msgs/s  56.305 KiB/s  ETA: Fri Aug 19 12:19:00 2016  294 s  785 msgs left
+msg INBOX.Deleted Items/109 {2329}          copied to Deleted Items/2698       2.67 msgs/s  56.062 KiB/s  ETA: Fri Aug 19 12:18:59 2016  294 s  784 msgs left
+msg INBOX.Deleted Items/110 {1877}          copied to Deleted Items/2700       2.67 msgs/s  55.817 KiB/s  ETA: Fri Aug 19 12:18:59 2016  293 s  783 msgs left
+msg INBOX.Deleted Items/111 {2464}          copied to Deleted Items/2702       2.67 msgs/s  55.446 KiB/s  ETA: Fri Aug 19 12:18:59 2016  293 s  782 msgs left
+msg INBOX.Deleted Items/112 {2839}          copied to Deleted Items/2703       2.67 msgs/s  55.079 KiB/s  ETA: Fri Aug 19 12:18:59 2016  293 s  781 msgs left
+msg INBOX.Deleted Items/113 {2817}          copied to Deleted Items/2704       2.67 msgs/s  54.694 KiB/s  ETA: Fri Aug 19 12:19:00 2016  293 s  780 msgs left
+msg INBOX.Deleted Items/114 {2812}          copied to Deleted Items/2705       2.66 msgs/s  54.328 KiB/s  ETA: Fri Aug 19 12:19:00 2016  293 s  779 msgs left
+msg INBOX.Deleted Items/115 {2742}          copied to Deleted Items/2706       2.67 msgs/s  54.091 KiB/s  ETA: Fri Aug 19 12:19:00 2016  292 s  778 msgs left
+msg INBOX.Deleted Items/116 {2527}          copied to Deleted Items/2707       2.66 msgs/s  53.732 KiB/s  ETA: Fri Aug 19 12:19:00 2016  292 s  777 msgs left
+msg INBOX.Deleted Items/117 {2460}          copied to Deleted Items/2708       2.66 msgs/s  53.405 KiB/s  ETA: Fri Aug 19 12:19:01 2016  292 s  776 msgs left
+msg INBOX.Deleted Items/118 {1396}          copied to Deleted Items/2709       2.66 msgs/s  53.037 KiB/s  ETA: Fri Aug 19 12:19:01 2016  292 s  775 msgs left
+msg INBOX.Deleted Items/119 {2934}          copied to Deleted Items/2710       2.63 msgs/s  52.169 KiB/s  ETA: Fri Aug 19 12:19:05 2016  294 s  774 msgs left
+msg INBOX.Deleted Items/120 {2855}          copied to Deleted Items/2711       2.61 msgs/s  51.527 KiB/s  ETA: Fri Aug 19 12:19:07 2016  296 s  773 msgs left
+msg INBOX.Deleted Items/121 {1499}          copied to Deleted Items/2712       2.61 msgs/s  51.277 KiB/s  ETA: Fri Aug 19 12:19:07 2016  296 s  772 msgs left
+msg INBOX.Deleted Items/122 {2237}          copied to Deleted Items/2714       2.61 msgs/s  51.051 KiB/s  ETA: Fri Aug 19 12:19:07 2016  295 s  771 msgs left
+msg INBOX.Deleted Items/123 {2839}          copied to Deleted Items/2716       2.62 msgs/s  50.840 KiB/s  ETA: Fri Aug 19 12:19:06 2016  294 s  770 msgs left
+msg INBOX.Deleted Items/124 {2398}          copied to Deleted Items/2717       2.62 msgs/s  50.544 KiB/s  ETA: Fri Aug 19 12:19:07 2016  294 s  769 msgs left
+msg INBOX.Deleted Items/125 {1508}          copied to Deleted Items/2718       2.62 msgs/s  50.277 KiB/s  ETA: Fri Aug 19 12:19:07 2016  294 s  768 msgs left
+msg INBOX.Deleted Items/126 {4584}          copied to Deleted Items/2720       2.62 msgs/s  50.099 KiB/s  ETA: Fri Aug 19 12:19:06 2016  293 s  767 msgs left
+msg INBOX.Deleted Items/127 {1531}          copied to Deleted Items/2722       2.62 msgs/s  49.903 KiB/s  ETA: Fri Aug 19 12:19:06 2016  292 s  766 msgs left
+msg INBOX.Deleted Items/128 {1538}          copied to Deleted Items/2724       2.63 msgs/s  49.705 KiB/s  ETA: Fri Aug 19 12:19:05 2016  291 s  765 msgs left
+msg INBOX.Deleted Items/129 {1881}          copied to Deleted Items/2726       2.63 msgs/s  49.514 KiB/s  ETA: Fri Aug 19 12:19:05 2016  290 s  764 msgs left
+msg INBOX.Deleted Items/130 {1530}          copied to Deleted Items/2728       2.63 msgs/s  49.327 KiB/s  ETA: Fri Aug 19 12:19:04 2016  290 s  763 msgs left
+msg INBOX.Deleted Items/131 {1530}          copied to Deleted Items/2730       2.64 msgs/s  49.130 KiB/s  ETA: Fri Aug 19 12:19:04 2016  289 s  762 msgs left
+msg INBOX.Deleted Items/132 {1511}          copied to Deleted Items/2732       2.64 msgs/s  48.942 KiB/s  ETA: Fri Aug 19 12:19:03 2016  288 s  761 msgs left
+msg INBOX.Deleted Items/133 {1450}          copied to Deleted Items/2734       2.65 msgs/s  48.767 KiB/s  ETA: Fri Aug 19 12:19:03 2016  287 s  760 msgs left
+msg INBOX.Deleted Items/134 {1417}          copied to Deleted Items/2735       2.65 msgs/s  48.580 KiB/s  ETA: Fri Aug 19 12:19:02 2016  286 s  759 msgs left
+msg INBOX.Deleted Items/135 {1424}          copied to Deleted Items/2736       2.65 msgs/s  48.401 KiB/s  ETA: Fri Aug 19 12:19:02 2016  286 s  758 msgs left
+msg INBOX.Deleted Items/136 {1976}          copied to Deleted Items/2737       2.66 msgs/s  48.237 KiB/s  ETA: Fri Aug 19 12:19:01 2016  285 s  757 msgs left
+msg INBOX.Deleted Items/137 {2386}          copied to Deleted Items/2739       2.66 msgs/s  48.063 KiB/s  ETA: Fri Aug 19 12:19:01 2016  284 s  756 msgs left
+msg INBOX.Deleted Items/138 {2415}          copied to Deleted Items/2740       2.67 msgs/s  47.902 KiB/s  ETA: Fri Aug 19 12:19:00 2016  283 s  755 msgs left
+msg INBOX.Deleted Items/139 {2489}          copied to Deleted Items/2741       2.67 msgs/s  47.726 KiB/s  ETA: Fri Aug 19 12:19:00 2016  283 s  754 msgs left
+msg INBOX.Deleted Items/140 {2494}          copied to Deleted Items/2742       2.67 msgs/s  47.563 KiB/s  ETA: Fri Aug 19 12:18:59 2016  282 s  753 msgs left
+msg INBOX.Deleted Items/141 {2404}          copied to Deleted Items/2743       2.67 msgs/s  47.399 KiB/s  ETA: Fri Aug 19 12:18:59 2016  281 s  752 msgs left
+msg INBOX.Deleted Items/142 {2486}          copied to Deleted Items/2744       2.68 msgs/s  47.247 KiB/s  ETA: Fri Aug 19 12:18:58 2016  280 s  751 msgs left
+msg INBOX.Deleted Items/143 {2486}          copied to Deleted Items/2745       2.68 msgs/s  47.093 KiB/s  ETA: Fri Aug 19 12:18:58 2016  280 s  750 msgs left
+msg INBOX.Deleted Items/144 {2666}          copied to Deleted Items/2747       2.69 msgs/s  46.949 KiB/s  ETA: Fri Aug 19 12:18:57 2016  279 s  749 msgs left
+msg INBOX.Deleted Items/145 {2499}          copied to Deleted Items/2748       2.69 msgs/s  46.799 KiB/s  ETA: Fri Aug 19 12:18:57 2016  278 s  748 msgs left
+msg INBOX.Deleted Items/146 {2628}          copied to Deleted Items/2749       2.69 msgs/s  46.641 KiB/s  ETA: Fri Aug 19 12:18:56 2016  277 s  747 msgs left
+msg INBOX.Deleted Items/147 {2698}          copied to Deleted Items/2750       2.70 msgs/s  46.485 KiB/s  ETA: Fri Aug 19 12:18:56 2016  277 s  746 msgs left
+msg INBOX.Deleted Items/148 {2579}          copied to Deleted Items/2751       2.70 msgs/s  46.316 KiB/s  ETA: Fri Aug 19 12:18:56 2016  276 s  745 msgs left
+msg INBOX.Deleted Items/149 {2588}          copied to Deleted Items/2752       2.70 msgs/s  46.175 KiB/s  ETA: Fri Aug 19 12:18:55 2016  275 s  744 msgs left
+msg INBOX.Deleted Items/150 {2561}          copied to Deleted Items/2753       2.70 msgs/s  46.000 KiB/s  ETA: Fri Aug 19 12:18:55 2016  275 s  743 msgs left
+msg INBOX.Deleted Items/151 {2708}          copied to Deleted Items/2754       2.71 msgs/s  45.855 KiB/s  ETA: Fri Aug 19 12:18:55 2016  274 s  742 msgs left
+msg INBOX.Deleted Items/152 {1497}          copied to Deleted Items/2755       2.70 msgs/s  45.584 KiB/s  ETA: Fri Aug 19 12:18:55 2016  274 s  741 msgs left
+msg INBOX.Deleted Items/153 {1521}          copied to Deleted Items/2757       2.71 msgs/s  45.425 KiB/s  ETA: Fri Aug 19 12:18:55 2016  273 s  740 msgs left
+msg INBOX.Deleted Items/154 {1496}          copied to Deleted Items/2759       2.71 msgs/s  45.273 KiB/s  ETA: Fri Aug 19 12:18:54 2016  273 s  739 msgs left
+msg INBOX.Deleted Items/155 {1520}          copied to Deleted Items/2761       2.71 msgs/s  45.111 KiB/s  ETA: Fri Aug 19 12:18:54 2016  272 s  738 msgs left
+msg INBOX.Deleted Items/156 {1471}          copied to Deleted Items/2763       2.72 msgs/s  44.960 KiB/s  ETA: Fri Aug 19 12:18:53 2016  271 s  737 msgs left
+msg INBOX.Deleted Items/157 {1532}          copied to Deleted Items/2765       2.72 msgs/s  44.817 KiB/s  ETA: Fri Aug 19 12:18:53 2016  271 s  736 msgs left
+msg INBOX.Deleted Items/158 {1522}          copied to Deleted Items/2767       2.72 msgs/s  44.669 KiB/s  ETA: Fri Aug 19 12:18:52 2016  270 s  735 msgs left
+msg INBOX.Deleted Items/159 {2477}          copied to Deleted Items/2769       2.73 msgs/s  44.535 KiB/s  ETA: Fri Aug 19 12:18:52 2016  269 s  734 msgs left
+msg INBOX.Deleted Items/160 {1493}          copied to Deleted Items/2771       2.73 msgs/s  44.394 KiB/s  ETA: Fri Aug 19 12:18:52 2016  268 s  733 msgs left
+msg INBOX.Deleted Items/174 {2528}          copied to Deleted Items/2773       2.73 msgs/s  44.258 KiB/s  ETA: Fri Aug 19 12:18:46 2016  263 s  719 msgs left
+msg INBOX.Deleted Items/175 {2549}          copied to Deleted Items/2774       2.74 msgs/s  44.120 KiB/s  ETA: Fri Aug 19 12:18:46 2016  262 s  718 msgs left
+msg INBOX.Deleted Items/176 {2697}          copied to Deleted Items/2775       2.74 msgs/s  43.988 KiB/s  ETA: Fri Aug 19 12:18:46 2016  262 s  717 msgs left
+msg INBOX.Deleted Items/178 {2731}          copied to Deleted Items/2776       2.74 msgs/s  43.867 KiB/s  ETA: Fri Aug 19 12:18:45 2016  261 s  715 msgs left
+msg INBOX.Deleted Items/179 {2475}          copied to Deleted Items/2777       2.75 msgs/s  43.743 KiB/s  ETA: Fri Aug 19 12:18:44 2016  260 s  714 msgs left
+msg INBOX.Deleted Items/180 {2829}          copied to Deleted Items/2778       2.75 msgs/s  43.620 KiB/s  ETA: Fri Aug 19 12:18:44 2016  259 s  713 msgs left
+msg INBOX.Deleted Items/181 {2440}          copied to Deleted Items/2779       2.75 msgs/s  43.470 KiB/s  ETA: Fri Aug 19 12:18:44 2016  259 s  712 msgs left
+msg INBOX.Deleted Items/182 {2494}          copied to Deleted Items/2780       2.75 msgs/s  43.336 KiB/s  ETA: Fri Aug 19 12:18:44 2016  258 s  711 msgs left
+msg INBOX.Deleted Items/183 {2704}          copied to Deleted Items/2781       2.76 msgs/s  43.199 KiB/s  ETA: Fri Aug 19 12:18:43 2016  258 s  710 msgs left
+msg INBOX.Deleted Items/184 {3282}          copied to Deleted Items/2782       2.76 msgs/s  43.081 KiB/s  ETA: Fri Aug 19 12:18:43 2016  257 s  709 msgs left
+msg INBOX.Deleted Items/185 {2829}          copied to Deleted Items/2783       2.76 msgs/s  42.953 KiB/s  ETA: Fri Aug 19 12:18:43 2016  256 s  708 msgs left
+msg INBOX.Deleted Items/186 {2557}          copied to Deleted Items/2784       2.76 msgs/s  42.819 KiB/s  ETA: Fri Aug 19 12:18:42 2016  256 s  707 msgs left
+msg INBOX.Deleted Items/187 {2473}          copied to Deleted Items/2785       2.77 msgs/s  42.686 KiB/s  ETA: Fri Aug 19 12:18:42 2016  255 s  706 msgs left
+msg INBOX.Deleted Items/188 {2692}          copied to Deleted Items/2786       2.77 msgs/s  42.568 KiB/s  ETA: Fri Aug 19 12:18:42 2016  255 s  705 msgs left
+msg INBOX.Deleted Items/189 {2451}          copied to Deleted Items/2787       2.77 msgs/s  42.445 KiB/s  ETA: Fri Aug 19 12:18:41 2016  254 s  704 msgs left
+msg INBOX.Deleted Items/190 {2584}          copied to Deleted Items/2788       2.77 msgs/s  42.333 KiB/s  ETA: Fri Aug 19 12:18:41 2016  253 s  703 msgs left
+msg INBOX.Deleted Items/191 {2443}          copied to Deleted Items/2789       2.78 msgs/s  42.216 KiB/s  ETA: Fri Aug 19 12:18:41 2016  253 s  702 msgs left
+msg INBOX.Deleted Items/192 {2583}          copied to Deleted Items/2790       2.78 msgs/s  42.100 KiB/s  ETA: Fri Aug 19 12:18:40 2016  252 s  701 msgs left
+msg INBOX.Deleted Items/193 {1569}          copied to Deleted Items/2791       2.78 msgs/s  41.973 KiB/s  ETA: Fri Aug 19 12:18:40 2016  251 s  700 msgs left
+msg INBOX.Deleted Items/194 {2812}          copied to Deleted Items/2793       2.74 msgs/s  41.122 KiB/s  ETA: Fri Aug 19 12:18:46 2016  255 s  699 msgs left
+msg INBOX.Deleted Items/195 {2478}          copied to Deleted Items/2794       2.74 msgs/s  41.021 KiB/s  ETA: Fri Aug 19 12:18:45 2016  255 s  698 msgs left
+msg INBOX.Deleted Items/196 {1399}          copied to Deleted Items/2796       2.74 msgs/s  40.904 KiB/s  ETA: Fri Aug 19 12:18:45 2016  254 s  697 msgs left
+msg INBOX.Deleted Items/197 {2470}          copied to Deleted Items/2797       2.75 msgs/s  40.796 KiB/s  ETA: Fri Aug 19 12:18:44 2016  253 s  696 msgs left
+msg INBOX.Deleted Items/198 {2517}          copied to Deleted Items/2798       2.75 msgs/s  40.677 KiB/s  ETA: Fri Aug 19 12:18:44 2016  253 s  695 msgs left
+msg INBOX.Deleted Items/199 {2453}          copied to Deleted Items/2799       2.75 msgs/s  40.575 KiB/s  ETA: Fri Aug 19 12:18:44 2016  252 s  694 msgs left
+msg INBOX.Deleted Items/200 {2480}          copied to Deleted Items/2800       2.75 msgs/s  40.469 KiB/s  ETA: Fri Aug 19 12:18:43 2016  252 s  693 msgs left
+msg INBOX.Deleted Items/201 {2450}          copied to Deleted Items/2801       2.76 msgs/s  40.355 KiB/s  ETA: Fri Aug 19 12:18:43 2016  251 s  692 msgs left
+msg INBOX.Deleted Items/202 {1452}          copied to Deleted Items/2802       2.76 msgs/s  40.235 KiB/s  ETA: Fri Aug 19 12:18:43 2016  250 s  691 msgs left
+msg INBOX.Deleted Items/203 {2704}          copied to Deleted Items/2803       2.76 msgs/s  40.122 KiB/s  ETA: Fri Aug 19 12:18:43 2016  250 s  690 msgs left
+msg INBOX.Deleted Items/204 {2703}          copied to Deleted Items/2804       2.76 msgs/s  40.022 KiB/s  ETA: Fri Aug 19 12:18:42 2016  249 s  689 msgs left
+msg INBOX.Deleted Items/205 {2414}          copied to Deleted Items/2805       2.77 msgs/s  39.919 KiB/s  ETA: Fri Aug 19 12:18:42 2016  249 s  688 msgs left
+msg INBOX.Deleted Items/206 {2446}          copied to Deleted Items/2806       2.77 msgs/s  39.821 KiB/s  ETA: Fri Aug 19 12:18:42 2016  248 s  687 msgs left
+msg INBOX.Deleted Items/207 {2440}          copied to Deleted Items/2807       2.77 msgs/s  39.720 KiB/s  ETA: Fri Aug 19 12:18:41 2016  247 s  686 msgs left
+msg INBOX.Deleted Items/208 {2480}          copied to Deleted Items/2808       2.77 msgs/s  39.572 KiB/s  ETA: Fri Aug 19 12:18:41 2016  247 s  685 msgs left
+msg INBOX.Deleted Items/209 {2756}          copied to Deleted Items/2809       2.77 msgs/s  39.397 KiB/s  ETA: Fri Aug 19 12:18:42 2016  247 s  684 msgs left
+msg INBOX.Deleted Items/210 {2485}          copied to Deleted Items/2810       2.77 msgs/s  39.219 KiB/s  ETA: Fri Aug 19 12:18:42 2016  247 s  683 msgs left
+msg INBOX.Deleted Items/211 {1452}          copied to Deleted Items/2811       2.75 msgs/s  38.886 KiB/s  ETA: Fri Aug 19 12:18:44 2016  248 s  682 msgs left
+msg INBOX.Deleted Items/212 {2395}          copied to Deleted Items/2812       2.75 msgs/s  38.716 KiB/s  ETA: Fri Aug 19 12:18:44 2016  248 s  681 msgs left
+msg INBOX.Deleted Items/213 {2481}          copied to Deleted Items/2813       2.75 msgs/s  38.549 KiB/s  ETA: Fri Aug 19 12:18:44 2016  247 s  680 msgs left
+msg INBOX.Deleted Items/214 {2584}          copied to Deleted Items/2814       2.75 msgs/s  38.407 KiB/s  ETA: Fri Aug 19 12:18:44 2016  247 s  679 msgs left
+msg INBOX.Deleted Items/215 {2763}          copied to Deleted Items/2815       2.75 msgs/s  38.296 KiB/s  ETA: Fri Aug 19 12:18:44 2016  247 s  678 msgs left
+msg INBOX.Deleted Items/216 {2422}          copied to Deleted Items/2816       2.75 msgs/s  38.128 KiB/s  ETA: Fri Aug 19 12:18:45 2016  247 s  677 msgs left
+msg INBOX.Deleted Items/217 {2452}          copied to Deleted Items/2817       2.75 msgs/s  37.988 KiB/s  ETA: Fri Aug 19 12:18:45 2016  246 s  676 msgs left
+msg INBOX.Deleted Items/218 {2454}          copied to Deleted Items/2818       2.74 msgs/s  37.831 KiB/s  ETA: Fri Aug 19 12:18:45 2016  246 s  675 msgs left
+msg INBOX.Deleted Items/219 {2574}          copied to Deleted Items/2819       2.74 msgs/s  37.681 KiB/s  ETA: Fri Aug 19 12:18:45 2016  246 s  674 msgs left
+msg INBOX.Deleted Items/220 {2423}          copied to Deleted Items/2820       2.74 msgs/s  37.555 KiB/s  ETA: Fri Aug 19 12:18:45 2016  245 s  673 msgs left
+msg INBOX.Deleted Items/221 {2618}          copied to Deleted Items/2821       2.74 msgs/s  37.396 KiB/s  ETA: Fri Aug 19 12:18:45 2016  245 s  672 msgs left
+msg INBOX.Deleted Items/222 {2671}          copied to Deleted Items/2822       2.72 msgs/s  37.049 KiB/s  ETA: Fri Aug 19 12:18:47 2016  247 s  671 msgs left
+msg INBOX.Deleted Items/223 {2442}          copied to Deleted Items/2824       2.71 msgs/s  36.735 KiB/s  ETA: Fri Aug 19 12:18:49 2016  247 s  670 msgs left
+msg INBOX.Deleted Items/224 {2402}          copied to Deleted Items/2825       2.70 msgs/s  36.517 KiB/s  ETA: Fri Aug 19 12:18:50 2016  248 s  669 msgs left
+msg INBOX.Deleted Items/225 {1700}          copied to Deleted Items/2826       2.69 msgs/s  36.306 KiB/s  ETA: Fri Aug 19 12:18:51 2016  248 s  668 msgs left
+msg INBOX.Deleted Items/226 {1773}          copied to Deleted Items/2828       2.69 msgs/s  36.180 KiB/s  ETA: Fri Aug 19 12:18:51 2016  248 s  667 msgs left
+msg INBOX.Deleted Items/227 {2562}          copied to Deleted Items/2830       2.70 msgs/s  36.102 KiB/s  ETA: Fri Aug 19 12:18:51 2016  247 s  666 msgs left
+msg INBOX.Deleted Items/228 {2548}          copied to Deleted Items/2831       2.70 msgs/s  36.019 KiB/s  ETA: Fri Aug 19 12:18:50 2016  246 s  665 msgs left
+msg INBOX.Deleted Items/229 {2571}          copied to Deleted Items/2832       2.70 msgs/s  35.938 KiB/s  ETA: Fri Aug 19 12:18:50 2016  246 s  664 msgs left
+msg INBOX.Deleted Items/230 {2441}          copied to Deleted Items/2833       2.70 msgs/s  35.860 KiB/s  ETA: Fri Aug 19 12:18:50 2016  245 s  663 msgs left
+msg INBOX.Deleted Items/231 {1424}          copied to Deleted Items/2834       2.71 msgs/s  35.768 KiB/s  ETA: Fri Aug 19 12:18:49 2016  245 s  662 msgs left
+msg INBOX.Deleted Items/232 {2510}          copied to Deleted Items/2835       2.71 msgs/s  35.679 KiB/s  ETA: Fri Aug 19 12:18:49 2016  244 s  661 msgs left
+msg INBOX.Deleted Items/233 {2443}          copied to Deleted Items/2836       2.71 msgs/s  35.595 KiB/s  ETA: Fri Aug 19 12:18:49 2016  243 s  660 msgs left
+msg INBOX.Deleted Items/234 {2533}          copied to Deleted Items/2837       2.71 msgs/s  35.517 KiB/s  ETA: Fri Aug 19 12:18:49 2016  243 s  659 msgs left
+msg INBOX.Deleted Items/235 {1977}          copied to Deleted Items/2838       2.71 msgs/s  35.366 KiB/s  ETA: Fri Aug 19 12:18:49 2016  243 s  658 msgs left
+msg INBOX.Deleted Items/236 {1975}          copied to Deleted Items/2840       2.71 msgs/s  35.288 KiB/s  ETA: Fri Aug 19 12:18:49 2016  242 s  657 msgs left
+msg INBOX.Deleted Items/237 {1895}          copied to Deleted Items/2842       2.72 msgs/s  35.208 KiB/s  ETA: Fri Aug 19 12:18:48 2016  242 s  656 msgs left
+msg INBOX.Deleted Items/238 {2442}          copied to Deleted Items/2843       2.72 msgs/s  35.130 KiB/s  ETA: Fri Aug 19 12:18:48 2016  241 s  655 msgs left
+msg INBOX.Deleted Items/239 {2423}          copied to Deleted Items/2844       2.72 msgs/s  35.053 KiB/s  ETA: Fri Aug 19 12:18:48 2016  240 s  654 msgs left
+msg INBOX.Deleted Items/240 {2420}          copied to Deleted Items/2845       2.72 msgs/s  34.972 KiB/s  ETA: Fri Aug 19 12:18:47 2016  240 s  653 msgs left
+msg INBOX.Deleted Items/241 {2563}          copied to Deleted Items/2846       2.72 msgs/s  34.898 KiB/s  ETA: Fri Aug 19 12:18:47 2016  239 s  652 msgs left
+msg INBOX.Deleted Items/242 {2425}          copied to Deleted Items/2847       2.73 msgs/s  34.822 KiB/s  ETA: Fri Aug 19 12:18:47 2016  239 s  651 msgs left
+msg INBOX.Deleted Items/243 {2698}          copied to Deleted Items/2848       2.73 msgs/s  34.745 KiB/s  ETA: Fri Aug 19 12:18:47 2016  238 s  650 msgs left
+msg INBOX.Deleted Items/244 {2440}          copied to Deleted Items/2849       2.73 msgs/s  34.668 KiB/s  ETA: Fri Aug 19 12:18:46 2016  238 s  649 msgs left
+msg INBOX.Deleted Items/245 {2466}          copied to Deleted Items/2850       2.73 msgs/s  34.587 KiB/s  ETA: Fri Aug 19 12:18:46 2016  237 s  648 msgs left
+msg INBOX.Deleted Items/246 {2466}          copied to Deleted Items/2851       2.74 msgs/s  34.519 KiB/s  ETA: Fri Aug 19 12:18:46 2016  237 s  647 msgs left
+msg INBOX.Deleted Items/247 {2473}          copied to Deleted Items/2852       2.74 msgs/s  34.448 KiB/s  ETA: Fri Aug 19 12:18:46 2016  236 s  646 msgs left
+msg INBOX.Deleted Items/248 {2580}          copied to Deleted Items/2853       2.74 msgs/s  34.376 KiB/s  ETA: Fri Aug 19 12:18:45 2016  235 s  645 msgs left
+msg INBOX.Deleted Items/249 {2551}          copied to Deleted Items/2854       2.74 msgs/s  34.295 KiB/s  ETA: Fri Aug 19 12:18:45 2016  235 s  644 msgs left
+msg INBOX.Deleted Items/250 {2530}          copied to Deleted Items/2855       2.74 msgs/s  34.222 KiB/s  ETA: Fri Aug 19 12:18:45 2016  234 s  643 msgs left
+msg INBOX.Deleted Items/251 {2601}          copied to Deleted Items/2856       2.75 msgs/s  34.154 KiB/s  ETA: Fri Aug 19 12:18:45 2016  234 s  642 msgs left
+msg INBOX.Deleted Items/252 {2604}          copied to Deleted Items/2857       2.74 msgs/s  33.984 KiB/s  ETA: Fri Aug 19 12:18:45 2016  234 s  641 msgs left
+msg INBOX.Deleted Items/253 {2695}          copied to Deleted Items/2858       2.74 msgs/s  33.913 KiB/s  ETA: Fri Aug 19 12:18:45 2016  233 s  640 msgs left
+msg INBOX.Deleted Items/254 {2589}          copied to Deleted Items/2859       2.74 msgs/s  33.844 KiB/s  ETA: Fri Aug 19 12:18:45 2016  233 s  639 msgs left
+msg INBOX.Deleted Items/255 {2774}          copied to Deleted Items/2860       2.75 msgs/s  33.776 KiB/s  ETA: Fri Aug 19 12:18:45 2016  232 s  638 msgs left
+msg INBOX.Deleted Items/256 {2667}          copied to Deleted Items/2861       2.75 msgs/s  33.709 KiB/s  ETA: Fri Aug 19 12:18:44 2016  232 s  637 msgs left
+msg INBOX.Deleted Items/257 {2451}          copied to Deleted Items/2862       2.75 msgs/s  33.640 KiB/s  ETA: Fri Aug 19 12:18:44 2016  231 s  636 msgs left
+msg INBOX.Deleted Items/258 {2574}          copied to Deleted Items/2863       2.75 msgs/s  33.572 KiB/s  ETA: Fri Aug 19 12:18:44 2016  231 s  635 msgs left
+msg INBOX.Deleted Items/259 {2424}          copied to Deleted Items/2864       2.75 msgs/s  33.509 KiB/s  ETA: Fri Aug 19 12:18:43 2016  230 s  634 msgs left
+msg INBOX.Deleted Items/260 {2584}          copied to Deleted Items/2865       2.76 msgs/s  33.439 KiB/s  ETA: Fri Aug 19 12:18:43 2016  230 s  633 msgs left
+msg INBOX.Deleted Items/261 {2615}          copied to Deleted Items/2866       2.76 msgs/s  33.376 KiB/s  ETA: Fri Aug 19 12:18:43 2016  229 s  632 msgs left
+msg INBOX.Deleted Items/262 {2997}          copied to Deleted Items/2867       2.76 msgs/s  33.311 KiB/s  ETA: Fri Aug 19 12:18:43 2016  229 s  631 msgs left
+msg INBOX.Deleted Items/263 {2453}          copied to Deleted Items/2868       2.76 msgs/s  33.246 KiB/s  ETA: Fri Aug 19 12:18:42 2016  228 s  630 msgs left
+msg INBOX.Deleted Items/264 {2474}          copied to Deleted Items/2869       2.77 msgs/s  33.185 KiB/s  ETA: Fri Aug 19 12:18:42 2016  227 s  629 msgs left
+msg INBOX.Deleted Items/265 {2448}          copied to Deleted Items/2870       2.77 msgs/s  33.121 KiB/s  ETA: Fri Aug 19 12:18:42 2016  227 s  628 msgs left
+msg INBOX.Deleted Items/266 {2549}          copied to Deleted Items/2871       2.77 msgs/s  33.043 KiB/s  ETA: Fri Aug 19 12:18:42 2016  226 s  627 msgs left
+msg INBOX.Deleted Items/267 {2459}          copied to Deleted Items/2872       2.77 msgs/s  32.980 KiB/s  ETA: Fri Aug 19 12:18:42 2016  226 s  626 msgs left
+msg INBOX.Deleted Items/268 {2962}          copied to Deleted Items/2873       2.77 msgs/s  32.920 KiB/s  ETA: Fri Aug 19 12:18:41 2016  225 s  625 msgs left
+msg INBOX.Deleted Items/269 {2452}          copied to Deleted Items/2874       2.77 msgs/s  32.852 KiB/s  ETA: Fri Aug 19 12:18:41 2016  225 s  624 msgs left
+msg INBOX.Deleted Items/270 {2409}          copied to Deleted Items/2875       2.78 msgs/s  32.788 KiB/s  ETA: Fri Aug 19 12:18:41 2016  224 s  623 msgs left
+msg INBOX.Deleted Items/271 {2424}          copied to Deleted Items/2876       2.78 msgs/s  32.723 KiB/s  ETA: Fri Aug 19 12:18:41 2016  224 s  622 msgs left
+msg INBOX.Deleted Items/272 {2256}          copied to Deleted Items/2877       2.78 msgs/s  32.655 KiB/s  ETA: Fri Aug 19 12:18:40 2016  223 s  621 msgs left
+msg INBOX.Deleted Items/273 {2568}          copied to Deleted Items/2878       2.78 msgs/s  32.590 KiB/s  ETA: Fri Aug 19 12:18:40 2016  223 s  620 msgs left
+msg INBOX.Deleted Items/274 {2450}          copied to Deleted Items/2879       2.78 msgs/s  32.524 KiB/s  ETA: Fri Aug 19 12:18:40 2016  222 s  619 msgs left
+msg INBOX.Deleted Items/275 {2449}          copied to Deleted Items/2880       2.78 msgs/s  32.451 KiB/s  ETA: Fri Aug 19 12:18:40 2016  222 s  618 msgs left
+msg INBOX.Deleted Items/276 {2447}          copied to Deleted Items/2881       2.79 msgs/s  32.391 KiB/s  ETA: Fri Aug 19 12:18:40 2016  221 s  617 msgs left
+msg INBOX.Deleted Items/277 {2722}          copied to Deleted Items/2882       2.79 msgs/s  32.336 KiB/s  ETA: Fri Aug 19 12:18:39 2016  221 s  616 msgs left
+msg INBOX.Deleted Items/278 {2662}          copied to Deleted Items/2883       2.79 msgs/s  32.281 KiB/s  ETA: Fri Aug 19 12:18:39 2016  220 s  615 msgs left
+msg INBOX.Deleted Items/279 {2691}          copied to Deleted Items/2884       2.79 msgs/s  32.194 KiB/s  ETA: Fri Aug 19 12:18:39 2016  220 s  614 msgs left
+msg INBOX.Deleted Items/280 {2448}          copied to Deleted Items/2885       2.79 msgs/s  32.136 KiB/s  ETA: Fri Aug 19 12:18:39 2016  219 s  613 msgs left
+msg INBOX.Deleted Items/281 {2423}          copied to Deleted Items/2887       2.79 msgs/s  32.070 KiB/s  ETA: Fri Aug 19 12:18:39 2016  219 s  612 msgs left
+msg INBOX.Deleted Items/282 {2560}          copied to Deleted Items/2888       2.79 msgs/s  31.933 KiB/s  ETA: Fri Aug 19 12:18:39 2016  219 s  611 msgs left
+msg INBOX.Deleted Items/283 {2439}          copied to Deleted Items/2889       2.79 msgs/s  31.870 KiB/s  ETA: Fri Aug 19 12:18:39 2016  219 s  610 msgs left
+msg INBOX.Deleted Items/284 {2477}          copied to Deleted Items/2890       2.79 msgs/s  31.803 KiB/s  ETA: Fri Aug 19 12:18:39 2016  218 s  609 msgs left
+msg INBOX.Deleted Items/285 {2465}          copied to Deleted Items/2891       2.79 msgs/s  31.742 KiB/s  ETA: Fri Aug 19 12:18:39 2016  218 s  608 msgs left
+msg INBOX.Deleted Items/286 {2472}          copied to Deleted Items/2892       2.80 msgs/s  31.683 KiB/s  ETA: Fri Aug 19 12:18:39 2016  217 s  607 msgs left
+msg INBOX.Deleted Items/287 {2455}          copied to Deleted Items/2893       2.80 msgs/s  31.622 KiB/s  ETA: Fri Aug 19 12:18:38 2016  217 s  606 msgs left
+msg INBOX.Deleted Items/288 {2658}          copied to Deleted Items/2894       2.80 msgs/s  31.565 KiB/s  ETA: Fri Aug 19 12:18:38 2016  216 s  605 msgs left
+msg INBOX.Deleted Items/289 {2473}          copied to Deleted Items/2895       2.80 msgs/s  31.503 KiB/s  ETA: Fri Aug 19 12:18:38 2016  216 s  604 msgs left
+msg INBOX.Deleted Items/290 {4253}          copied to Deleted Items/2896       2.80 msgs/s  31.463 KiB/s  ETA: Fri Aug 19 12:18:38 2016  215 s  603 msgs left
+msg INBOX.Deleted Items/291 {1418}          copied to Deleted Items/2898       2.80 msgs/s  31.397 KiB/s  ETA: Fri Aug 19 12:18:38 2016  215 s  602 msgs left
+msg INBOX.Deleted Items/292 {1441}          copied to Deleted Items/2899       2.81 msgs/s  31.329 KiB/s  ETA: Fri Aug 19 12:18:37 2016  214 s  601 msgs left
+msg INBOX.Deleted Items/293 {1653}          copied to Deleted Items/2900       2.81 msgs/s  31.270 KiB/s  ETA: Fri Aug 19 12:18:37 2016  214 s  600 msgs left
+msg INBOX.Deleted Items/294 {2929}          copied to Deleted Items/2902       2.81 msgs/s  31.218 KiB/s  ETA: Fri Aug 19 12:18:37 2016  213 s  599 msgs left
+msg INBOX.Deleted Items/295 {2792}          copied to Deleted Items/2903       2.81 msgs/s  31.166 KiB/s  ETA: Fri Aug 19 12:18:37 2016  213 s  598 msgs left
+msg INBOX.Deleted Items/296 {2570}          copied to Deleted Items/2904       2.81 msgs/s  31.111 KiB/s  ETA: Fri Aug 19 12:18:37 2016  212 s  597 msgs left
+msg INBOX.Deleted Items/297 {2456}          copied to Deleted Items/2905       2.81 msgs/s  31.048 KiB/s  ETA: Fri Aug 19 12:18:36 2016  212 s  596 msgs left
+msg INBOX.Deleted Items/298 {2676}          copied to Deleted Items/2906       2.82 msgs/s  30.986 KiB/s  ETA: Fri Aug 19 12:18:36 2016  211 s  595 msgs left
+msg INBOX.Deleted Items/299 {2592}          copied to Deleted Items/2907       2.82 msgs/s  30.932 KiB/s  ETA: Fri Aug 19 12:18:36 2016  211 s  594 msgs left
+msg INBOX.Deleted Items/300 {2889}          copied to Deleted Items/2908       2.82 msgs/s  30.883 KiB/s  ETA: Fri Aug 19 12:18:36 2016  210 s  593 msgs left
+msg INBOX.Deleted Items/301 {2563}          copied to Deleted Items/2909       2.82 msgs/s  30.828 KiB/s  ETA: Fri Aug 19 12:18:36 2016  210 s  592 msgs left
+msg INBOX.Deleted Items/302 {2425}          copied to Deleted Items/2910       2.82 msgs/s  30.774 KiB/s  ETA: Fri Aug 19 12:18:35 2016  209 s  591 msgs left
+msg INBOX.Deleted Items/303 {2689}          copied to Deleted Items/2911       2.82 msgs/s  30.721 KiB/s  ETA: Fri Aug 19 12:18:35 2016  209 s  590 msgs left
+msg INBOX.Deleted Items/304 {2683}          copied to Deleted Items/2912       2.83 msgs/s  30.674 KiB/s  ETA: Fri Aug 19 12:18:35 2016  208 s  589 msgs left
+msg INBOX.Deleted Items/305 {2454}          copied to Deleted Items/2913       2.83 msgs/s  30.620 KiB/s  ETA: Fri Aug 19 12:18:35 2016  208 s  588 msgs left
+msg INBOX.Deleted Items/306 {2449}          copied to Deleted Items/2914       2.83 msgs/s  30.569 KiB/s  ETA: Fri Aug 19 12:18:35 2016  207 s  587 msgs left
+msg INBOX.Deleted Items/307 {2993}          copied to Deleted Items/2915       2.83 msgs/s  30.519 KiB/s  ETA: Fri Aug 19 12:18:34 2016  207 s  586 msgs left
+msg INBOX.Deleted Items/308 {2570}          copied to Deleted Items/2916       2.83 msgs/s  30.467 KiB/s  ETA: Fri Aug 19 12:18:34 2016  207 s  585 msgs left
+msg INBOX.Deleted Items/309 {2440}          copied to Deleted Items/2917       2.83 msgs/s  30.401 KiB/s  ETA: Fri Aug 19 12:18:34 2016  206 s  584 msgs left
+msg INBOX.Deleted Items/310 {2451}          copied to Deleted Items/2918       2.83 msgs/s  30.352 KiB/s  ETA: Fri Aug 19 12:18:34 2016  206 s  583 msgs left
+msg INBOX.Deleted Items/311 {2551}          copied to Deleted Items/2919       2.84 msgs/s  30.305 KiB/s  ETA: Fri Aug 19 12:18:34 2016  205 s  582 msgs left
+msg INBOX.Deleted Items/312 {2263}          copied to Deleted Items/2920       2.84 msgs/s  30.254 KiB/s  ETA: Fri Aug 19 12:18:34 2016  205 s  581 msgs left
+msg INBOX.Deleted Items/313 {2631}          copied to Deleted Items/2921       2.84 msgs/s  30.206 KiB/s  ETA: Fri Aug 19 12:18:33 2016  204 s  580 msgs left
+msg INBOX.Deleted Items/314 {2485}          copied to Deleted Items/2922       2.84 msgs/s  30.155 KiB/s  ETA: Fri Aug 19 12:18:33 2016  204 s  579 msgs left
+msg INBOX.Deleted Items/315 {2872}          copied to Deleted Items/2923       2.84 msgs/s  30.097 KiB/s  ETA: Fri Aug 19 12:18:33 2016  203 s  578 msgs left
+msg INBOX.Deleted Items/316 {2445}          copied to Deleted Items/2924       2.84 msgs/s  29.991 KiB/s  ETA: Fri Aug 19 12:18:34 2016  203 s  577 msgs left
+msg INBOX.Deleted Items/317 {2454}          copied to Deleted Items/2925       2.83 msgs/s  29.865 KiB/s  ETA: Fri Aug 19 12:18:34 2016  203 s  576 msgs left
+msg INBOX.Deleted Items/318 {2595}          copied to Deleted Items/2926       2.83 msgs/s  29.757 KiB/s  ETA: Fri Aug 19 12:18:35 2016  203 s  575 msgs left
+msg INBOX.Deleted Items/319 {2481}          copied to Deleted Items/2927       2.83 msgs/s  29.703 KiB/s  ETA: Fri Aug 19 12:18:35 2016  203 s  574 msgs left
+msg INBOX.Deleted Items/320 {2447}          copied to Deleted Items/2928       2.83 msgs/s  29.605 KiB/s  ETA: Fri Aug 19 12:18:35 2016  203 s  573 msgs left
+msg INBOX.Deleted Items/321 {2500}          copied to Deleted Items/2929       2.83 msgs/s  29.544 KiB/s  ETA: Fri Aug 19 12:18:35 2016  202 s  572 msgs left
+msg INBOX.Deleted Items/322 {2570}          copied to Deleted Items/2930       2.83 msgs/s  29.501 KiB/s  ETA: Fri Aug 19 12:18:35 2016  202 s  571 msgs left
+msg INBOX.Deleted Items/323 {2475}          copied to Deleted Items/2931       2.83 msgs/s  29.453 KiB/s  ETA: Fri Aug 19 12:18:34 2016  201 s  570 msgs left
+msg INBOX.Deleted Items/324 {2496}          copied to Deleted Items/2932       2.83 msgs/s  29.407 KiB/s  ETA: Fri Aug 19 12:18:34 2016  201 s  569 msgs left
+msg INBOX.Deleted Items/325 {2419}          copied to Deleted Items/2933       2.83 msgs/s  29.357 KiB/s  ETA: Fri Aug 19 12:18:34 2016  200 s  568 msgs left
+msg INBOX.Deleted Items/326 {2559}          copied to Deleted Items/2934       2.83 msgs/s  29.292 KiB/s  ETA: Fri Aug 19 12:18:34 2016  200 s  567 msgs left
+msg INBOX.Deleted Items/327 {2819}          copied to Deleted Items/2935       2.84 msgs/s  29.249 KiB/s  ETA: Fri Aug 19 12:18:34 2016  200 s  566 msgs left
+msg INBOX.Deleted Items/328 {2442}          copied to Deleted Items/2936       2.84 msgs/s  29.204 KiB/s  ETA: Fri Aug 19 12:18:34 2016  199 s  565 msgs left
+msg INBOX.Deleted Items/329 {3452}          copied to Deleted Items/2937       2.84 msgs/s  29.167 KiB/s  ETA: Fri Aug 19 12:18:33 2016  199 s  564 msgs left
+msg INBOX.Deleted Items/330 {2590}          copied to Deleted Items/2938       2.84 msgs/s  29.122 KiB/s  ETA: Fri Aug 19 12:18:33 2016  198 s  563 msgs left
+msg INBOX.Deleted Items/331 {2416}          copied to Deleted Items/2939       2.84 msgs/s  29.067 KiB/s  ETA: Fri Aug 19 12:18:33 2016  198 s  562 msgs left
+msg INBOX.Deleted Items/332 {2454}          copied to Deleted Items/2940       2.84 msgs/s  29.020 KiB/s  ETA: Fri Aug 19 12:18:33 2016  197 s  561 msgs left
+msg INBOX.Deleted Items/333 {1428}          copied to Deleted Items/2941       2.85 msgs/s  28.971 KiB/s  ETA: Fri Aug 19 12:18:33 2016  197 s  560 msgs left
+msg INBOX.Deleted Items/334 {2571}          copied to Deleted Items/2943       2.85 msgs/s  28.929 KiB/s  ETA: Fri Aug 19 12:18:33 2016  196 s  559 msgs left
+msg INBOX.Deleted Items/335 {2465}          copied to Deleted Items/2944       2.85 msgs/s  28.880 KiB/s  ETA: Fri Aug 19 12:18:33 2016  196 s  558 msgs left
+msg INBOX.Deleted Items/336 {2451}          copied to Deleted Items/2945       2.85 msgs/s  28.833 KiB/s  ETA: Fri Aug 19 12:18:32 2016  195 s  557 msgs left
+msg INBOX.Deleted Items/337 {2586}          copied to Deleted Items/2947       2.85 msgs/s  28.791 KiB/s  ETA: Fri Aug 19 12:18:32 2016  195 s  556 msgs left
+msg INBOX.Deleted Items/338 {2765}          copied to Deleted Items/2948       2.85 msgs/s  28.751 KiB/s  ETA: Fri Aug 19 12:18:32 2016  195 s  555 msgs left
+msg INBOX.Deleted Items/339 {2463}          copied to Deleted Items/2949       2.85 msgs/s  28.710 KiB/s  ETA: Fri Aug 19 12:18:32 2016  194 s  554 msgs left
+msg INBOX.Deleted Items/340 {2412}          copied to Deleted Items/2950       2.86 msgs/s  28.665 KiB/s  ETA: Fri Aug 19 12:18:32 2016  194 s  553 msgs left
+msg INBOX.Deleted Items/341 {2589}          copied to Deleted Items/2951       2.86 msgs/s  28.622 KiB/s  ETA: Fri Aug 19 12:18:31 2016  193 s  552 msgs left
+msg INBOX.Deleted Items/342 {2475}          copied to Deleted Items/2952       2.86 msgs/s  28.580 KiB/s  ETA: Fri Aug 19 12:18:31 2016  193 s  551 msgs left
+msg INBOX.Deleted Items/343 {2673}          copied to Deleted Items/2953       2.86 msgs/s  28.541 KiB/s  ETA: Fri Aug 19 12:18:31 2016  192 s  550 msgs left
+msg INBOX.Deleted Items/344 {2388}          copied to Deleted Items/2954       2.86 msgs/s  28.498 KiB/s  ETA: Fri Aug 19 12:18:31 2016  192 s  549 msgs left
+msg INBOX.Deleted Items/345 {2479}          copied to Deleted Items/2955       2.86 msgs/s  28.458 KiB/s  ETA: Fri Aug 19 12:18:31 2016  191 s  548 msgs left
+msg INBOX.Deleted Items/346 {2553}          copied to Deleted Items/2956       2.87 msgs/s  28.415 KiB/s  ETA: Fri Aug 19 12:18:31 2016  191 s  547 msgs left
+msg INBOX.Deleted Items/347 {2441}          copied to Deleted Items/2957       2.87 msgs/s  28.370 KiB/s  ETA: Fri Aug 19 12:18:30 2016  190 s  546 msgs left
+msg INBOX.Deleted Items/348 {2771}          copied to Deleted Items/2958       2.87 msgs/s  28.329 KiB/s  ETA: Fri Aug 19 12:18:30 2016  190 s  545 msgs left
+msg INBOX.Deleted Items/349 {2443}          copied to Deleted Items/2960       2.87 msgs/s  28.276 KiB/s  ETA: Fri Aug 19 12:18:30 2016  190 s  544 msgs left
+msg INBOX.Deleted Items/350 {2452}          copied to Deleted Items/2961       2.87 msgs/s  28.235 KiB/s  ETA: Fri Aug 19 12:18:30 2016  189 s  543 msgs left
+msg INBOX.Deleted Items/351 {1638}          copied to Deleted Items/2962       2.87 msgs/s  28.188 KiB/s  ETA: Fri Aug 19 12:18:30 2016  189 s  542 msgs left
+msg INBOX.Deleted Items/352 {2806}          copied to Deleted Items/2964       2.87 msgs/s  28.139 KiB/s  ETA: Fri Aug 19 12:18:30 2016  188 s  541 msgs left
+msg INBOX.Deleted Items/353 {3238}          copied to Deleted Items/2965       2.87 msgs/s  28.103 KiB/s  ETA: Fri Aug 19 12:18:30 2016  188 s  540 msgs left
+msg INBOX.Deleted Items/354 {2590}          copied to Deleted Items/2966       2.88 msgs/s  28.063 KiB/s  ETA: Fri Aug 19 12:18:29 2016  187 s  539 msgs left
+msg INBOX.Deleted Items/355 {2738}          copied to Deleted Items/2967       2.88 msgs/s  28.022 KiB/s  ETA: Fri Aug 19 12:18:29 2016  187 s  538 msgs left
+msg INBOX.Deleted Items/356 {2560}          copied to Deleted Items/2968       2.88 msgs/s  27.981 KiB/s  ETA: Fri Aug 19 12:18:29 2016  187 s  537 msgs left
+msg INBOX.Deleted Items/357 {2443}          copied to Deleted Items/2969       2.88 msgs/s  27.934 KiB/s  ETA: Fri Aug 19 12:18:29 2016  186 s  536 msgs left
+msg INBOX.Deleted Items/358 {2450}          copied to Deleted Items/2970       2.88 msgs/s  27.895 KiB/s  ETA: Fri Aug 19 12:18:29 2016  186 s  535 msgs left
+msg INBOX.Deleted Items/359 {2767}          copied to Deleted Items/2971       2.88 msgs/s  27.852 KiB/s  ETA: Fri Aug 19 12:18:29 2016  185 s  534 msgs left
+msg INBOX.Deleted Items/360 {2568}          copied to Deleted Items/2972       2.88 msgs/s  27.807 KiB/s  ETA: Fri Aug 19 12:18:29 2016  185 s  533 msgs left
+msg INBOX.Deleted Items/361 {2561}          copied to Deleted Items/2973       2.88 msgs/s  27.767 KiB/s  ETA: Fri Aug 19 12:18:29 2016  185 s  532 msgs left
+msg INBOX.Deleted Items/362 {2454}          copied to Deleted Items/2974       2.88 msgs/s  27.728 KiB/s  ETA: Fri Aug 19 12:18:28 2016  184 s  531 msgs left
+msg INBOX.Deleted Items/363 {2625}          copied to Deleted Items/2975       2.89 msgs/s  27.690 KiB/s  ETA: Fri Aug 19 12:18:28 2016  184 s  530 msgs left
+msg INBOX.Deleted Items/364 {16059}         copied to Deleted Items/2976       2.88 msgs/s  27.717 KiB/s  ETA: Fri Aug 19 12:18:28 2016  183 s  529 msgs left
+msg INBOX.Deleted Items/365 {2561}          copied to Deleted Items/2977       2.89 msgs/s  27.680 KiB/s  ETA: Fri Aug 19 12:18:28 2016  183 s  528 msgs left
+msg INBOX.Deleted Items/366 {2444}          copied to Deleted Items/2978       2.89 msgs/s  27.634 KiB/s  ETA: Fri Aug 19 12:18:28 2016  183 s  527 msgs left
+msg INBOX.Deleted Items/367 {2451}          copied to Deleted Items/2979       2.89 msgs/s  27.590 KiB/s  ETA: Fri Aug 19 12:18:28 2016  182 s  526 msgs left
+msg INBOX.Deleted Items/368 {2687}          copied to Deleted Items/2980       2.87 msgs/s  27.417 KiB/s  ETA: Fri Aug 19 12:18:30 2016  183 s  525 msgs left
+msg INBOX.Deleted Items/369 {2722}          copied to Deleted Items/2981       2.88 msgs/s  27.376 KiB/s  ETA: Fri Aug 19 12:18:29 2016  182 s  524 msgs left
+msg INBOX.Deleted Items/370 {2422}          copied to Deleted Items/2983       2.88 msgs/s  27.340 KiB/s  ETA: Fri Aug 19 12:18:29 2016  182 s  523 msgs left
+msg INBOX.Deleted Items/371 {2540}          copied to Deleted Items/2984       2.88 msgs/s  27.302 KiB/s  ETA: Fri Aug 19 12:18:29 2016  181 s  522 msgs left
+msg INBOX.Deleted Items/372 {2935}          copied to Deleted Items/2985       2.88 msgs/s  27.262 KiB/s  ETA: Fri Aug 19 12:18:29 2016  181 s  521 msgs left
+msg INBOX.Deleted Items/373 {2834}          copied to Deleted Items/2987       2.88 msgs/s  27.230 KiB/s  ETA: Fri Aug 19 12:18:29 2016  180 s  520 msgs left
+msg INBOX.Deleted Items/374 {2452}          copied to Deleted Items/2988       2.88 msgs/s  27.191 KiB/s  ETA: Fri Aug 19 12:18:29 2016  180 s  519 msgs left
+msg INBOX.Deleted Items/375 {2442}          copied to Deleted Items/2989       2.88 msgs/s  27.151 KiB/s  ETA: Fri Aug 19 12:18:29 2016  180 s  518 msgs left
+msg INBOX.Deleted Items/376 {2547}          copied to Deleted Items/2990       2.88 msgs/s  27.112 KiB/s  ETA: Fri Aug 19 12:18:28 2016  179 s  517 msgs left
+msg INBOX.Deleted Items/377 {2569}          copied to Deleted Items/2991       2.89 msgs/s  27.077 KiB/s  ETA: Fri Aug 19 12:18:28 2016  179 s  516 msgs left
+msg INBOX.Deleted Items/378 {2483}          copied to Deleted Items/2992       2.89 msgs/s  27.041 KiB/s  ETA: Fri Aug 19 12:18:28 2016  178 s  515 msgs left
+msg INBOX.Deleted Items/379 {2426}          copied to Deleted Items/2993       2.89 msgs/s  27.005 KiB/s  ETA: Fri Aug 19 12:18:28 2016  178 s  514 msgs left
+msg INBOX.Deleted Items/380 {2448}          copied to Deleted Items/2994       2.89 msgs/s  26.970 KiB/s  ETA: Fri Aug 19 12:18:28 2016  177 s  513 msgs left
+msg INBOX.Deleted Items/381 {2449}          copied to Deleted Items/2995       2.89 msgs/s  26.923 KiB/s  ETA: Fri Aug 19 12:18:28 2016  177 s  512 msgs left
+msg INBOX.Deleted Items/382 {2441}          copied to Deleted Items/2996       2.89 msgs/s  26.878 KiB/s  ETA: Fri Aug 19 12:18:28 2016  177 s  511 msgs left
+msg INBOX.Deleted Items/383 {1521}          copied to Deleted Items/2997       2.89 msgs/s  26.836 KiB/s  ETA: Fri Aug 19 12:18:28 2016  176 s  510 msgs left
+msg INBOX.Deleted Items/384 {2448}          copied to Deleted Items/2999       2.89 msgs/s  26.774 KiB/s  ETA: Fri Aug 19 12:18:28 2016  176 s  509 msgs left
+msg INBOX.Deleted Items/385 {1450}          copied to Deleted Items/3000       2.89 msgs/s  26.734 KiB/s  ETA: Fri Aug 19 12:18:28 2016  176 s  508 msgs left
+msg INBOX.Deleted Items/386 {2439}          copied to Deleted Items/3001       2.89 msgs/s  26.694 KiB/s  ETA: Fri Aug 19 12:18:27 2016  175 s  507 msgs left
+msg INBOX.Deleted Items/387 {1552}          copied to Deleted Items/3002       2.89 msgs/s  26.653 KiB/s  ETA: Fri Aug 19 12:18:27 2016  175 s  506 msgs left
+msg INBOX.Deleted Items/388 {1420}          copied to Deleted Items/3004       2.90 msgs/s  26.614 KiB/s  ETA: Fri Aug 19 12:18:27 2016  174 s  505 msgs left
+msg INBOX.Deleted Items/389 {2425}          copied to Deleted Items/3005       2.90 msgs/s  26.576 KiB/s  ETA: Fri Aug 19 12:18:27 2016  174 s  504 msgs left
+msg INBOX.Deleted Items/390 {2209}          copied to Deleted Items/3006       2.90 msgs/s  26.539 KiB/s  ETA: Fri Aug 19 12:18:27 2016  174 s  503 msgs left
+msg INBOX.Deleted Items/391 {2435}          copied to Deleted Items/3008       2.90 msgs/s  26.503 KiB/s  ETA: Fri Aug 19 12:18:27 2016  173 s  502 msgs left
+msg INBOX.Deleted Items/392 {2443}          copied to Deleted Items/3009       2.90 msgs/s  26.469 KiB/s  ETA: Fri Aug 19 12:18:27 2016  173 s  501 msgs left
+msg INBOX.Deleted Items/393 {2646}          copied to Deleted Items/3010       2.90 msgs/s  26.434 KiB/s  ETA: Fri Aug 19 12:18:26 2016  172 s  500 msgs left
+msg INBOX.Deleted Items/394 {2582}          copied to Deleted Items/3011       2.90 msgs/s  26.398 KiB/s  ETA: Fri Aug 19 12:18:26 2016  172 s  499 msgs left
+msg INBOX.Deleted Items/395 {2383}          copied to Deleted Items/3012       2.90 msgs/s  26.361 KiB/s  ETA: Fri Aug 19 12:18:26 2016  171 s  498 msgs left
+msg INBOX.Deleted Items/396 {2443}          copied to Deleted Items/3013       2.91 msgs/s  26.324 KiB/s  ETA: Fri Aug 19 12:18:26 2016  171 s  497 msgs left
+msg INBOX.Deleted Items/397 {1553}          copied to Deleted Items/3014       2.91 msgs/s  26.282 KiB/s  ETA: Fri Aug 19 12:18:26 2016  171 s  496 msgs left
+msg INBOX.Deleted Items/398 {2529}          copied to Deleted Items/3016       2.91 msgs/s  26.241 KiB/s  ETA: Fri Aug 19 12:18:26 2016  170 s  495 msgs left
+msg INBOX.Deleted Items/399 {2474}          copied to Deleted Items/3018       2.91 msgs/s  26.205 KiB/s  ETA: Fri Aug 19 12:18:26 2016  170 s  494 msgs left
+msg INBOX.Deleted Items/400 {2549}          copied to Deleted Items/3019       2.91 msgs/s  26.171 KiB/s  ETA: Fri Aug 19 12:18:26 2016  169 s  493 msgs left
+msg INBOX.Deleted Items/401 {2210}          copied to Deleted Items/3020       2.91 msgs/s  26.122 KiB/s  ETA: Fri Aug 19 12:18:26 2016  169 s  492 msgs left
+msg INBOX.Deleted Items/402 {2396}          copied to Deleted Items/3021       2.91 msgs/s  26.086 KiB/s  ETA: Fri Aug 19 12:18:26 2016  169 s  491 msgs left
+msg INBOX.Deleted Items/403 {2401}          copied to Deleted Items/3022       2.91 msgs/s  26.053 KiB/s  ETA: Fri Aug 19 12:18:26 2016  168 s  490 msgs left
+msg INBOX.Deleted Items/404 {2393}          copied to Deleted Items/3023       2.91 msgs/s  26.005 KiB/s  ETA: Fri Aug 19 12:18:26 2016  168 s  489 msgs left
+msg INBOX.Deleted Items/405 {2526}          copied to Deleted Items/3024       2.91 msgs/s  25.973 KiB/s  ETA: Fri Aug 19 12:18:25 2016  168 s  488 msgs left
+msg INBOX.Deleted Items/406 {2278}          copied to Deleted Items/3025       2.91 msgs/s  25.938 KiB/s  ETA: Fri Aug 19 12:18:25 2016  167 s  487 msgs left
+msg INBOX.Deleted Items/407 {2414}          copied to Deleted Items/3026       2.91 msgs/s  25.903 KiB/s  ETA: Fri Aug 19 12:18:25 2016  167 s  486 msgs left
+msg INBOX.Deleted Items/408 {2544}          copied to Deleted Items/3027       2.92 msgs/s  25.872 KiB/s  ETA: Fri Aug 19 12:18:25 2016  166 s  485 msgs left
+msg INBOX.Deleted Items/409 {2451}          copied to Deleted Items/3028       2.92 msgs/s  25.839 KiB/s  ETA: Fri Aug 19 12:18:25 2016  166 s  484 msgs left
+msg INBOX.Deleted Items/410 {2397}          copied to Deleted Items/3029       2.92 msgs/s  25.806 KiB/s  ETA: Fri Aug 19 12:18:25 2016  166 s  483 msgs left
+msg INBOX.Deleted Items/411 {1519}          copied to Deleted Items/3030       2.92 msgs/s  25.769 KiB/s  ETA: Fri Aug 19 12:18:25 2016  165 s  482 msgs left
+msg INBOX.Deleted Items/412 {2416}          copied to Deleted Items/3032       2.92 msgs/s  25.738 KiB/s  ETA: Fri Aug 19 12:18:25 2016  165 s  481 msgs left
+msg INBOX.Deleted Items/413 {2574}          copied to Deleted Items/3033       2.92 msgs/s  25.708 KiB/s  ETA: Fri Aug 19 12:18:24 2016  164 s  480 msgs left
+msg INBOX.Deleted Items/414 {2366}          copied to Deleted Items/3034       2.92 msgs/s  25.675 KiB/s  ETA: Fri Aug 19 12:18:24 2016  164 s  479 msgs left
+msg INBOX.Deleted Items/415 {2477}          copied to Deleted Items/3035       2.92 msgs/s  25.634 KiB/s  ETA: Fri Aug 19 12:18:24 2016  164 s  478 msgs left
+msg INBOX.Deleted Items/416 {2563}          copied to Deleted Items/3036       2.92 msgs/s  25.604 KiB/s  ETA: Fri Aug 19 12:18:24 2016  163 s  477 msgs left
+msg INBOX.Deleted Items/417 {2465}          copied to Deleted Items/3037       2.93 msgs/s  25.574 KiB/s  ETA: Fri Aug 19 12:18:24 2016  163 s  476 msgs left
+msg INBOX.Deleted Items/418 {2874}          copied to Deleted Items/3038       2.93 msgs/s  25.546 KiB/s  ETA: Fri Aug 19 12:18:24 2016  162 s  475 msgs left
+msg INBOX.Deleted Items/419 {1980}          copied to Deleted Items/3040       2.93 msgs/s  25.513 KiB/s  ETA: Fri Aug 19 12:18:24 2016  162 s  474 msgs left
+msg INBOX.Deleted Items/420 {2395}          copied to Deleted Items/3042       2.93 msgs/s  25.480 KiB/s  ETA: Fri Aug 19 12:18:24 2016  161 s  473 msgs left
+msg INBOX.Deleted Items/421 {1901}          copied to Deleted Items/3043       2.93 msgs/s  25.445 KiB/s  ETA: Fri Aug 19 12:18:23 2016  161 s  472 msgs left
+msg INBOX.Deleted Items/422 {10511}         copied to Deleted Items/3045       2.93 msgs/s  25.452 KiB/s  ETA: Fri Aug 19 12:18:24 2016  161 s  471 msgs left
+msg INBOX.Deleted Items/423 {3428}          copied to Deleted Items/3047       2.93 msgs/s  25.427 KiB/s  ETA: Fri Aug 19 12:18:23 2016  160 s  470 msgs left
+msg INBOX.Deleted Items/424 {2456}          copied to Deleted Items/3049       2.93 msgs/s  25.397 KiB/s  ETA: Fri Aug 19 12:18:23 2016  160 s  469 msgs left
+msg INBOX.Deleted Items/425 {2519}          copied to Deleted Items/3050       2.93 msgs/s  25.368 KiB/s  ETA: Fri Aug 19 12:18:23 2016  160 s  468 msgs left
+msg INBOX.Deleted Items/426 {2521}          copied to Deleted Items/3051       2.93 msgs/s  25.334 KiB/s  ETA: Fri Aug 19 12:18:23 2016  159 s  467 msgs left
+msg INBOX.Deleted Items/427 {2416}          copied to Deleted Items/3052       2.93 msgs/s  25.296 KiB/s  ETA: Fri Aug 19 12:18:23 2016  159 s  466 msgs left
+msg INBOX.Deleted Items/428 {2421}          copied to Deleted Items/3053       2.94 msgs/s  25.265 KiB/s  ETA: Fri Aug 19 12:18:23 2016  158 s  465 msgs left
+msg INBOX.Deleted Items/429 {2453}          copied to Deleted Items/3054       2.94 msgs/s  25.233 KiB/s  ETA: Fri Aug 19 12:18:23 2016  158 s  464 msgs left
+msg INBOX.Deleted Items/430 {2426}          copied to Deleted Items/3055       2.94 msgs/s  25.202 KiB/s  ETA: Fri Aug 19 12:18:23 2016  158 s  463 msgs left
+msg INBOX.Deleted Items/431 {1403}          copied to Deleted Items/3056       2.94 msgs/s  25.164 KiB/s  ETA: Fri Aug 19 12:18:23 2016  157 s  462 msgs left
+msg INBOX.Deleted Items/432 {2450}          copied to Deleted Items/3057       2.94 msgs/s  25.129 KiB/s  ETA: Fri Aug 19 12:18:23 2016  157 s  461 msgs left
+msg INBOX.Deleted Items/433 {1820}          copied to Deleted Items/3058       2.94 msgs/s  25.098 KiB/s  ETA: Fri Aug 19 12:18:22 2016  156 s  460 msgs left
+msg INBOX.Deleted Items/434 {1838}          copied to Deleted Items/3060       2.94 msgs/s  25.064 KiB/s  ETA: Fri Aug 19 12:18:22 2016  156 s  459 msgs left
+msg INBOX.Deleted Items/435 {2414}          copied to Deleted Items/3062       2.94 msgs/s  25.031 KiB/s  ETA: Fri Aug 19 12:18:22 2016  156 s  458 msgs left
+msg INBOX.Deleted Items/436 {2914}          copied to Deleted Items/3063       2.94 msgs/s  25.005 KiB/s  ETA: Fri Aug 19 12:18:22 2016  155 s  457 msgs left
+msg INBOX.Deleted Items/437 {2448}          copied to Deleted Items/3065       2.94 msgs/s  24.978 KiB/s  ETA: Fri Aug 19 12:18:22 2016  155 s  456 msgs left
+msg INBOX.Deleted Items/438 {2461}          copied to Deleted Items/3066       2.95 msgs/s  24.950 KiB/s  ETA: Fri Aug 19 12:18:22 2016  154 s  455 msgs left
+msg INBOX.Deleted Items/439 {2254}          copied to Deleted Items/3067       2.95 msgs/s  24.919 KiB/s  ETA: Fri Aug 19 12:18:22 2016  154 s  454 msgs left
+msg INBOX.Deleted Items/440 {2412}          copied to Deleted Items/3068       2.95 msgs/s  24.892 KiB/s  ETA: Fri Aug 19 12:18:22 2016  154 s  453 msgs left
+msg INBOX.Deleted Items/441 {2497}          copied to Deleted Items/3069       2.95 msgs/s  24.864 KiB/s  ETA: Fri Aug 19 12:18:21 2016  153 s  452 msgs left
+msg INBOX.Deleted Items/442 {1494}          copied to Deleted Items/3070       2.95 msgs/s  24.828 KiB/s  ETA: Fri Aug 19 12:18:21 2016  153 s  451 msgs left
+msg INBOX.Deleted Items/443 {2249}          copied to Deleted Items/3072       2.95 msgs/s  24.795 KiB/s  ETA: Fri Aug 19 12:18:21 2016  153 s  450 msgs left
+msg INBOX.Deleted Items/444 {1703}          copied to Deleted Items/3073       2.95 msgs/s  24.762 KiB/s  ETA: Fri Aug 19 12:18:21 2016  152 s  449 msgs left
+msg INBOX.Deleted Items/445 {2736}          copied to Deleted Items/3075       2.95 msgs/s  24.737 KiB/s  ETA: Fri Aug 19 12:18:21 2016  152 s  448 msgs left
+msg INBOX.Deleted Items/446 {2446}          copied to Deleted Items/3076       2.95 msgs/s  24.708 KiB/s  ETA: Fri Aug 19 12:18:21 2016  151 s  447 msgs left
+msg INBOX.Deleted Items/447 {2409}          copied to Deleted Items/3077       2.96 msgs/s  24.681 KiB/s  ETA: Fri Aug 19 12:18:21 2016  151 s  446 msgs left
+msg INBOX.Deleted Items/448 {2474}          copied to Deleted Items/3078       2.96 msgs/s  24.650 KiB/s  ETA: Fri Aug 19 12:18:21 2016  151 s  445 msgs left
+msg INBOX.Deleted Items/449 {2449}          copied to Deleted Items/3079       2.96 msgs/s  24.607 KiB/s  ETA: Fri Aug 19 12:18:21 2016  150 s  444 msgs left
+msg INBOX.Deleted Items/450 {2450}          copied to Deleted Items/3080       2.95 msgs/s  24.568 KiB/s  ETA: Fri Aug 19 12:18:21 2016  150 s  443 msgs left
+msg INBOX.Deleted Items/451 {2421}          copied to Deleted Items/3081       2.96 msgs/s  24.540 KiB/s  ETA: Fri Aug 19 12:18:21 2016  150 s  442 msgs left
+msg INBOX.Deleted Items/452 {2444}          copied to Deleted Items/3082       2.95 msgs/s  24.437 KiB/s  ETA: Fri Aug 19 12:18:22 2016  150 s  441 msgs left
+msg INBOX.Deleted Items/453 {2452}          copied to Deleted Items/3083       2.95 msgs/s  24.410 KiB/s  ETA: Fri Aug 19 12:18:21 2016  149 s  440 msgs left
+msg INBOX.Deleted Items/454 {3020}          copied to Deleted Items/3084       2.95 msgs/s  24.385 KiB/s  ETA: Fri Aug 19 12:18:21 2016  149 s  439 msgs left
+msg INBOX.Deleted Items/455 {2443}          copied to Deleted Items/3085       2.95 msgs/s  24.348 KiB/s  ETA: Fri Aug 19 12:18:21 2016  148 s  438 msgs left
+msg INBOX.Deleted Items/456 {2762}          copied to Deleted Items/3086       2.95 msgs/s  24.321 KiB/s  ETA: Fri Aug 19 12:18:21 2016  148 s  437 msgs left
+msg INBOX.Deleted Items/457 {1425}          copied to Deleted Items/3087       2.95 msgs/s  24.289 KiB/s  ETA: Fri Aug 19 12:18:21 2016  148 s  436 msgs left
+msg INBOX.Deleted Items/458 {2533}          copied to Deleted Items/3088       2.95 msgs/s  24.263 KiB/s  ETA: Fri Aug 19 12:18:21 2016  147 s  435 msgs left
+msg INBOX.Deleted Items/459 {2454}          copied to Deleted Items/3089       2.95 msgs/s  24.237 KiB/s  ETA: Fri Aug 19 12:18:21 2016  147 s  434 msgs left
+msg INBOX.Deleted Items/460 {2389}          copied to Deleted Items/3090       2.95 msgs/s  24.209 KiB/s  ETA: Fri Aug 19 12:18:21 2016  147 s  433 msgs left
+msg INBOX.Deleted Items/461 {2447}          copied to Deleted Items/3091       2.96 msgs/s  24.181 KiB/s  ETA: Fri Aug 19 12:18:21 2016  146 s  432 msgs left
+msg INBOX.Deleted Items/462 {2811}          copied to Deleted Items/3092       2.96 msgs/s  24.159 KiB/s  ETA: Fri Aug 19 12:18:21 2016  146 s  431 msgs left
+msg INBOX.Deleted Items/463 {2474}          copied to Deleted Items/3094       2.96 msgs/s  24.132 KiB/s  ETA: Fri Aug 19 12:18:21 2016  145 s  430 msgs left
+msg INBOX.Deleted Items/464 {1396}          copied to Deleted Items/3095       2.96 msgs/s  24.098 KiB/s  ETA: Fri Aug 19 12:18:20 2016  145 s  429 msgs left
+msg INBOX.Deleted Items/465 {1561}          copied to Deleted Items/3096       2.96 msgs/s  24.067 KiB/s  ETA: Fri Aug 19 12:18:20 2016  145 s  428 msgs left
+msg INBOX.Deleted Items/466 {2444}          copied to Deleted Items/3098       2.96 msgs/s  24.033 KiB/s  ETA: Fri Aug 19 12:18:20 2016  144 s  427 msgs left
+msg INBOX.Deleted Items/467 {2444}          copied to Deleted Items/3099       2.96 msgs/s  24.008 KiB/s  ETA: Fri Aug 19 12:18:20 2016  144 s  426 msgs left
+msg INBOX.Deleted Items/468 {2450}          copied to Deleted Items/3100       2.96 msgs/s  23.983 KiB/s  ETA: Fri Aug 19 12:18:20 2016  143 s  425 msgs left
+msg INBOX.Deleted Items/469 {2445}          copied to Deleted Items/3101       2.96 msgs/s  23.928 KiB/s  ETA: Fri Aug 19 12:18:20 2016  143 s  424 msgs left
+msg INBOX.Deleted Items/470 {1447}          copied to Deleted Items/3102       2.96 msgs/s  23.897 KiB/s  ETA: Fri Aug 19 12:18:20 2016  143 s  423 msgs left
+msg INBOX.Deleted Items/471 {1430}          copied to Deleted Items/3103       2.96 msgs/s  23.867 KiB/s  ETA: Fri Aug 19 12:18:20 2016  142 s  422 msgs left
+msg INBOX.Deleted Items/472 {2638}          copied to Deleted Items/3104       2.96 msgs/s  23.842 KiB/s  ETA: Fri Aug 19 12:18:20 2016  142 s  421 msgs left
+msg INBOX.Deleted Items/473 {2543}          copied to Deleted Items/3105       2.96 msgs/s  23.817 KiB/s  ETA: Fri Aug 19 12:18:20 2016  142 s  420 msgs left
+msg INBOX.Deleted Items/474 {2429}          copied to Deleted Items/3106       2.96 msgs/s  23.790 KiB/s  ETA: Fri Aug 19 12:18:20 2016  141 s  419 msgs left
+msg INBOX.Deleted Items/475 {2527}          copied to Deleted Items/3107       2.97 msgs/s  23.766 KiB/s  ETA: Fri Aug 19 12:18:20 2016  141 s  418 msgs left
+msg INBOX.Deleted Items/476 {2917}          copied to Deleted Items/3108       2.97 msgs/s  23.744 KiB/s  ETA: Fri Aug 19 12:18:20 2016  141 s  417 msgs left
+msg INBOX.Deleted Items/477 {2420}          copied to Deleted Items/3109       2.97 msgs/s  23.714 KiB/s  ETA: Fri Aug 19 12:18:20 2016  140 s  416 msgs left
+msg INBOX.Deleted Items/478 {2494}          copied to Deleted Items/3110       2.97 msgs/s  23.690 KiB/s  ETA: Fri Aug 19 12:18:19 2016  140 s  415 msgs left
+msg INBOX.Deleted Items/479 {2466}          copied to Deleted Items/3111       2.97 msgs/s  23.666 KiB/s  ETA: Fri Aug 19 12:18:19 2016  139 s  414 msgs left
+msg INBOX.Deleted Items/480 {2575}          copied to Deleted Items/3112       2.97 msgs/s  23.641 KiB/s  ETA: Fri Aug 19 12:18:19 2016  139 s  413 msgs left
+msg INBOX.Deleted Items/481 {2681}          copied to Deleted Items/3113       2.97 msgs/s  23.619 KiB/s  ETA: Fri Aug 19 12:18:19 2016  139 s  412 msgs left
+msg INBOX.Deleted Items/482 {2765}          copied to Deleted Items/3114       2.97 msgs/s  23.596 KiB/s  ETA: Fri Aug 19 12:18:19 2016  138 s  411 msgs left
+msg INBOX.Deleted Items/483 {2575}          copied to Deleted Items/3115       2.97 msgs/s  23.565 KiB/s  ETA: Fri Aug 19 12:18:19 2016  138 s  410 msgs left
+msg INBOX.Deleted Items/484 {2467}          copied to Deleted Items/3116       2.97 msgs/s  23.542 KiB/s  ETA: Fri Aug 19 12:18:19 2016  138 s  409 msgs left
+msg INBOX.Deleted Items/485 {3068}          copied to Deleted Items/3117       2.97 msgs/s  23.521 KiB/s  ETA: Fri Aug 19 12:18:19 2016  137 s  408 msgs left
+msg INBOX.Deleted Items/486 {2425}          copied to Deleted Items/3118       2.97 msgs/s  23.494 KiB/s  ETA: Fri Aug 19 12:18:19 2016  137 s  407 msgs left
+msg INBOX.Deleted Items/487 {2578}          copied to Deleted Items/3119       2.98 msgs/s  23.470 KiB/s  ETA: Fri Aug 19 12:18:19 2016  136 s  406 msgs left
+msg INBOX.Deleted Items/488 {2578}          copied to Deleted Items/3120       2.98 msgs/s  23.443 KiB/s  ETA: Fri Aug 19 12:18:19 2016  136 s  405 msgs left
+msg INBOX.Deleted Items/489 {1514}          copied to Deleted Items/3121       2.98 msgs/s  23.415 KiB/s  ETA: Fri Aug 19 12:18:18 2016  136 s  404 msgs left
+msg INBOX.Deleted Items/490 {1421}          copied to Deleted Items/3123       2.98 msgs/s  23.386 KiB/s  ETA: Fri Aug 19 12:18:18 2016  135 s  403 msgs left
+msg INBOX.Deleted Items/491 {1520}          copied to Deleted Items/3124       2.98 msgs/s  23.358 KiB/s  ETA: Fri Aug 19 12:18:18 2016  135 s  402 msgs left
+msg INBOX.Deleted Items/492 {1445}          copied to Deleted Items/3126       2.98 msgs/s  23.314 KiB/s  ETA: Fri Aug 19 12:18:18 2016  135 s  401 msgs left
+msg INBOX.Deleted Items/493 {1820}          copied to Deleted Items/3127       2.98 msgs/s  23.289 KiB/s  ETA: Fri Aug 19 12:18:18 2016  134 s  400 msgs left
+msg INBOX.Deleted Items/494 {1490}          copied to Deleted Items/3129       2.98 msgs/s  23.260 KiB/s  ETA: Fri Aug 19 12:18:18 2016  134 s  399 msgs left
+msg INBOX.Deleted Items/495 {2449}          copied to Deleted Items/3131       2.98 msgs/s  23.235 KiB/s  ETA: Fri Aug 19 12:18:18 2016  133 s  398 msgs left
+msg INBOX.Deleted Items/496 {2425}          copied to Deleted Items/3132       2.98 msgs/s  23.192 KiB/s  ETA: Fri Aug 19 12:18:18 2016  133 s  397 msgs left
+msg INBOX.Deleted Items/497 {2501}          copied to Deleted Items/3133       2.98 msgs/s  23.167 KiB/s  ETA: Fri Aug 19 12:18:18 2016  133 s  396 msgs left
+msg INBOX.Deleted Items/498 {3347}          copied to Deleted Items/3134       2.98 msgs/s  23.146 KiB/s  ETA: Fri Aug 19 12:18:18 2016  133 s  395 msgs left
+msg INBOX.Deleted Items/499 {2548}          copied to Deleted Items/3135       2.98 msgs/s  23.122 KiB/s  ETA: Fri Aug 19 12:18:18 2016  132 s  394 msgs left
+msg INBOX.Deleted Items/500 {2417}          copied to Deleted Items/3136       2.98 msgs/s  23.094 KiB/s  ETA: Fri Aug 19 12:18:18 2016  132 s  393 msgs left
+msg INBOX.Deleted Items/501 {2617}          copied to Deleted Items/3137       2.98 msgs/s  23.071 KiB/s  ETA: Fri Aug 19 12:18:18 2016  131 s  392 msgs left
+msg INBOX.Deleted Items/502 {2485}          copied to Deleted Items/3138       2.98 msgs/s  23.047 KiB/s  ETA: Fri Aug 19 12:18:18 2016  131 s  391 msgs left
+msg INBOX.Deleted Items/503 {2475}          copied to Deleted Items/3139       2.98 msgs/s  23.002 KiB/s  ETA: Fri Aug 19 12:18:18 2016  131 s  390 msgs left
+msg INBOX.Deleted Items/504 {2578}          copied to Deleted Items/3140       2.98 msgs/s  22.981 KiB/s  ETA: Fri Aug 19 12:18:18 2016  130 s  389 msgs left
+msg INBOX.Deleted Items/505 {2479}          copied to Deleted Items/3141       2.98 msgs/s  22.956 KiB/s  ETA: Fri Aug 19 12:18:18 2016  130 s  388 msgs left
+msg INBOX.Deleted Items/506 {2614}          copied to Deleted Items/3142       2.98 msgs/s  22.935 KiB/s  ETA: Fri Aug 19 12:18:18 2016  130 s  387 msgs left
+msg INBOX.Deleted Items/507 {2480}          copied to Deleted Items/3143       2.98 msgs/s  22.894 KiB/s  ETA: Fri Aug 19 12:18:18 2016  129 s  386 msgs left
+msg INBOX.Deleted Items/508 {2427}          copied to Deleted Items/3144       2.98 msgs/s  22.873 KiB/s  ETA: Fri Aug 19 12:18:18 2016  129 s  385 msgs left
+msg INBOX.Deleted Items/509 {1894}          copied to Deleted Items/3145       2.98 msgs/s  22.849 KiB/s  ETA: Fri Aug 19 12:18:18 2016  129 s  384 msgs left
+msg INBOX.Deleted Items/510 {2990}          copied to Deleted Items/3147       2.99 msgs/s  22.830 KiB/s  ETA: Fri Aug 19 12:18:18 2016  128 s  383 msgs left
+msg INBOX.Deleted Items/511 {2452}          copied to Deleted Items/3148       2.98 msgs/s  22.783 KiB/s  ETA: Fri Aug 19 12:18:18 2016  128 s  382 msgs left
+msg INBOX.Deleted Items/512 {2453}          copied to Deleted Items/3149       2.98 msgs/s  22.735 KiB/s  ETA: Fri Aug 19 12:18:18 2016  128 s  381 msgs left
+msg INBOX.Deleted Items/513 {2677}          copied to Deleted Items/3150       2.98 msgs/s  22.712 KiB/s  ETA: Fri Aug 19 12:18:18 2016  127 s  380 msgs left
+msg INBOX.Deleted Items/514 {2699}          copied to Deleted Items/3151       2.98 msgs/s  22.672 KiB/s  ETA: Fri Aug 19 12:18:18 2016  127 s  379 msgs left
+msg INBOX.Deleted Items/515 {1635}          copied to Deleted Items/3152       2.98 msgs/s  22.647 KiB/s  ETA: Fri Aug 19 12:18:18 2016  127 s  378 msgs left
+msg INBOX.Deleted Items/516 {2440}          copied to Deleted Items/3154       2.98 msgs/s  22.626 KiB/s  ETA: Fri Aug 19 12:18:18 2016  126 s  377 msgs left
+msg INBOX.Deleted Items/517 {2424}          copied to Deleted Items/3155       2.97 msgs/s  22.507 KiB/s  ETA: Fri Aug 19 12:18:19 2016  127 s  376 msgs left
+msg INBOX.Deleted Items/518 {2417}          copied to Deleted Items/3156       2.97 msgs/s  22.486 KiB/s  ETA: Fri Aug 19 12:18:19 2016  126 s  375 msgs left
+msg INBOX.Deleted Items/519 {2582}          copied to Deleted Items/3157       2.97 msgs/s  22.445 KiB/s  ETA: Fri Aug 19 12:18:19 2016  126 s  374 msgs left
+msg INBOX.Deleted Items/520 {2487}          copied to Deleted Items/3158       2.97 msgs/s  22.420 KiB/s  ETA: Fri Aug 19 12:18:19 2016  126 s  373 msgs left
+msg INBOX.Deleted Items/521 {2450}          copied to Deleted Items/3159       2.97 msgs/s  22.400 KiB/s  ETA: Fri Aug 19 12:18:19 2016  125 s  372 msgs left
+msg INBOX.Deleted Items/522 {2778}          copied to Deleted Items/3160       2.97 msgs/s  22.380 KiB/s  ETA: Fri Aug 19 12:18:19 2016  125 s  371 msgs left
+msg INBOX.Deleted Items/523 {2425}          copied to Deleted Items/3161       2.97 msgs/s  22.357 KiB/s  ETA: Fri Aug 19 12:18:19 2016  124 s  370 msgs left
+msg INBOX.Deleted Items/524 {2785}          copied to Deleted Items/3162       2.97 msgs/s  22.335 KiB/s  ETA: Fri Aug 19 12:18:19 2016  124 s  369 msgs left
+msg INBOX.Deleted Items/525 {1472}          copied to Deleted Items/3163       2.97 msgs/s  22.309 KiB/s  ETA: Fri Aug 19 12:18:19 2016  124 s  368 msgs left
+msg INBOX.Deleted Items/526 {2569}          copied to Deleted Items/3164       2.97 msgs/s  22.269 KiB/s  ETA: Fri Aug 19 12:18:19 2016  123 s  367 msgs left
+msg INBOX.Deleted Items/527 {2525}          copied to Deleted Items/3166       2.97 msgs/s  22.238 KiB/s  ETA: Fri Aug 19 12:18:19 2016  123 s  366 msgs left
+msg INBOX.Deleted Items/528 {2443}          copied to Deleted Items/3167       2.97 msgs/s  22.197 KiB/s  ETA: Fri Aug 19 12:18:19 2016  123 s  365 msgs left
+msg INBOX.Deleted Items/529 {2415}          copied to Deleted Items/3168       2.97 msgs/s  22.158 KiB/s  ETA: Fri Aug 19 12:18:19 2016  123 s  364 msgs left
+msg INBOX.Deleted Items/530 {1526}          copied to Deleted Items/3169       2.96 msgs/s  22.086 KiB/s  ETA: Fri Aug 19 12:18:20 2016  123 s  363 msgs left
+msg INBOX.Deleted Items/531 {2653}          copied to Deleted Items/3171       2.96 msgs/s  22.045 KiB/s  ETA: Fri Aug 19 12:18:20 2016  122 s  362 msgs left
+msg INBOX.Deleted Items/532 {1530}          copied to Deleted Items/3172       2.96 msgs/s  22.002 KiB/s  ETA: Fri Aug 19 12:18:20 2016  122 s  361 msgs left
+msg INBOX.Deleted Items/533 {2440}          copied to Deleted Items/3174       2.96 msgs/s  21.965 KiB/s  ETA: Fri Aug 19 12:18:21 2016  122 s  360 msgs left
+msg INBOX.Deleted Items/534 {2456}          copied to Deleted Items/3175       2.96 msgs/s  21.932 KiB/s  ETA: Fri Aug 19 12:18:21 2016  121 s  359 msgs left
+msg INBOX.Deleted Items/535 {2438}          copied to Deleted Items/3176       2.95 msgs/s  21.894 KiB/s  ETA: Fri Aug 19 12:18:21 2016  121 s  358 msgs left
+msg INBOX.Deleted Items/536 {1528}          copied to Deleted Items/3177       2.95 msgs/s  21.850 KiB/s  ETA: Fri Aug 19 12:18:21 2016  121 s  357 msgs left
+msg INBOX.Deleted Items/537 {1528}          copied to Deleted Items/3179       2.95 msgs/s  21.819 KiB/s  ETA: Fri Aug 19 12:18:21 2016  121 s  356 msgs left
+msg INBOX.Deleted Items/538 {1502}          copied to Deleted Items/3181       2.95 msgs/s  21.794 KiB/s  ETA: Fri Aug 19 12:18:21 2016  120 s  355 msgs left
+msg INBOX.Deleted Items/539 {3306}          copied to Deleted Items/3183       2.95 msgs/s  21.776 KiB/s  ETA: Fri Aug 19 12:18:21 2016  120 s  354 msgs left
+msg INBOX.Deleted Items/540 {1427}          copied to Deleted Items/3184       2.95 msgs/s  21.730 KiB/s  ETA: Fri Aug 19 12:18:21 2016  120 s  353 msgs left
+msg INBOX.Deleted Items/541 {2447}          copied to Deleted Items/3185       2.95 msgs/s  21.712 KiB/s  ETA: Fri Aug 19 12:18:21 2016  119 s  352 msgs left
+msg INBOX.Deleted Items/542 {2569}          copied to Deleted Items/3186       2.95 msgs/s  21.693 KiB/s  ETA: Fri Aug 19 12:18:21 2016  119 s  351 msgs left
+msg INBOX.Deleted Items/543 {2453}          copied to Deleted Items/3187       2.95 msgs/s  21.672 KiB/s  ETA: Fri Aug 19 12:18:21 2016  118 s  350 msgs left
+msg INBOX.Deleted Items/544 {2435}          copied to Deleted Items/3188       2.96 msgs/s  21.653 KiB/s  ETA: Fri Aug 19 12:18:21 2016  118 s  349 msgs left
+msg INBOX.Deleted Items/545 {2418}          copied to Deleted Items/3189       2.96 msgs/s  21.633 KiB/s  ETA: Fri Aug 19 12:18:21 2016  118 s  348 msgs left
+msg INBOX.Deleted Items/546 {1529}          copied to Deleted Items/3190       2.96 msgs/s  21.610 KiB/s  ETA: Fri Aug 19 12:18:21 2016  117 s  347 msgs left
+msg INBOX.Deleted Items/547 {2642}          copied to Deleted Items/3192       2.96 msgs/s  21.594 KiB/s  ETA: Fri Aug 19 12:18:20 2016  117 s  346 msgs left
+msg INBOX.Deleted Items/548 {1509}          copied to Deleted Items/3193       2.96 msgs/s  21.572 KiB/s  ETA: Fri Aug 19 12:18:20 2016  117 s  345 msgs left
+msg INBOX.Deleted Items/549 {2725}          copied to Deleted Items/3195       2.96 msgs/s  21.556 KiB/s  ETA: Fri Aug 19 12:18:20 2016  116 s  344 msgs left
+msg INBOX.Deleted Items/550 {2237}          copied to Deleted Items/3196       2.96 msgs/s  21.535 KiB/s  ETA: Fri Aug 19 12:18:20 2016  116 s  343 msgs left
+msg INBOX.Deleted Items/551 {1451}          copied to Deleted Items/3197       2.96 msgs/s  21.513 KiB/s  ETA: Fri Aug 19 12:18:20 2016  115 s  342 msgs left
+msg INBOX.Deleted Items/552 {2418}          copied to Deleted Items/3198       2.96 msgs/s  21.496 KiB/s  ETA: Fri Aug 19 12:18:20 2016  115 s  341 msgs left
+msg INBOX.Deleted Items/553 {1349}          copied to Deleted Items/3199       2.96 msgs/s  21.472 KiB/s  ETA: Fri Aug 19 12:18:20 2016  115 s  340 msgs left
+msg INBOX.Deleted Items/554 {2445}          copied to Deleted Items/3201       2.97 msgs/s  21.453 KiB/s  ETA: Fri Aug 19 12:18:20 2016  114 s  339 msgs left
+msg INBOX.Deleted Items/555 {2484}          copied to Deleted Items/3202       2.97 msgs/s  21.433 KiB/s  ETA: Fri Aug 19 12:18:20 2016  114 s  338 msgs left
+msg INBOX.Deleted Items/556 {2662}          copied to Deleted Items/3203       2.97 msgs/s  21.414 KiB/s  ETA: Fri Aug 19 12:18:20 2016  114 s  337 msgs left
+msg INBOX.Deleted Items/557 {2459}          copied to Deleted Items/3204       2.97 msgs/s  21.396 KiB/s  ETA: Fri Aug 19 12:18:20 2016  113 s  336 msgs left
+msg INBOX.Deleted Items/558 {2454}          copied to Deleted Items/3205       2.97 msgs/s  21.376 KiB/s  ETA: Fri Aug 19 12:18:19 2016  113 s  335 msgs left
+msg INBOX.Deleted Items/559 {1406}          copied to Deleted Items/3206       2.96 msgs/s  21.322 KiB/s  ETA: Fri Aug 19 12:18:20 2016  113 s  334 msgs left
+msg INBOX.Deleted Items/560 {2451}          copied to Deleted Items/3208       2.97 msgs/s  21.303 KiB/s  ETA: Fri Aug 19 12:18:20 2016  112 s  333 msgs left
+msg INBOX.Deleted Items/561 {2649}          copied to Deleted Items/3209       2.97 msgs/s  21.286 KiB/s  ETA: Fri Aug 19 12:18:20 2016  112 s  332 msgs left
+msg INBOX.Deleted Items/562 {2441}          copied to Deleted Items/3210       2.97 msgs/s  21.267 KiB/s  ETA: Fri Aug 19 12:18:20 2016  112 s  331 msgs left
+msg INBOX.Deleted Items/563 {2616}          copied to Deleted Items/3211       2.97 msgs/s  21.251 KiB/s  ETA: Fri Aug 19 12:18:19 2016  111 s  330 msgs left
+msg INBOX.Deleted Items/564 {2466}          copied to Deleted Items/3212       2.97 msgs/s  21.232 KiB/s  ETA: Fri Aug 19 12:18:19 2016  111 s  329 msgs left
+msg INBOX.Deleted Items/565 {2654}          copied to Deleted Items/3213       2.97 msgs/s  21.211 KiB/s  ETA: Fri Aug 19 12:18:19 2016  110 s  328 msgs left
+msg INBOX.Deleted Items/566 {1794}          copied to Deleted Items/3214       2.97 msgs/s  21.189 KiB/s  ETA: Fri Aug 19 12:18:19 2016  110 s  327 msgs left
+msg INBOX.Deleted Items/567 {1431}          copied to Deleted Items/3215       2.97 msgs/s  21.165 KiB/s  ETA: Fri Aug 19 12:18:19 2016  110 s  326 msgs left
+msg INBOX.Deleted Items/568 {2421}          copied to Deleted Items/3216       2.97 msgs/s  21.147 KiB/s  ETA: Fri Aug 19 12:18:19 2016  109 s  325 msgs left
+msg INBOX.Deleted Items/569 {2246}          copied to Deleted Items/3217       2.97 msgs/s  21.129 KiB/s  ETA: Fri Aug 19 12:18:19 2016  109 s  324 msgs left
+msg INBOX.Deleted Items/570 {2543}          copied to Deleted Items/3218       2.97 msgs/s  21.113 KiB/s  ETA: Fri Aug 19 12:18:19 2016  109 s  323 msgs left
+msg INBOX.Deleted Items/571 {2510}          copied to Deleted Items/3219       2.97 msgs/s  21.097 KiB/s  ETA: Fri Aug 19 12:18:19 2016  108 s  322 msgs left
+msg INBOX.Deleted Items/572 {2426}          copied to Deleted Items/3220       2.97 msgs/s  21.081 KiB/s  ETA: Fri Aug 19 12:18:19 2016  108 s  321 msgs left
+msg INBOX.Deleted Items/573 {2575}          copied to Deleted Items/3221       2.98 msgs/s  21.064 KiB/s  ETA: Fri Aug 19 12:18:19 2016  108 s  320 msgs left
+msg INBOX.Deleted Items/574 {2909}          copied to Deleted Items/3222       2.98 msgs/s  21.045 KiB/s  ETA: Fri Aug 19 12:18:19 2016  107 s  319 msgs left
+msg INBOX.Deleted Items/575 {2575}          copied to Deleted Items/3223       2.98 msgs/s  21.028 KiB/s  ETA: Fri Aug 19 12:18:19 2016  107 s  318 msgs left
+msg INBOX.Deleted Items/576 {2424}          copied to Deleted Items/3224       2.98 msgs/s  21.007 KiB/s  ETA: Fri Aug 19 12:18:19 2016  106 s  317 msgs left
+msg INBOX.Deleted Items/577 {2572}          copied to Deleted Items/3225       2.98 msgs/s  20.991 KiB/s  ETA: Fri Aug 19 12:18:18 2016  106 s  316 msgs left
+msg INBOX.Deleted Items/578 {2606}          copied to Deleted Items/3226       2.98 msgs/s  20.973 KiB/s  ETA: Fri Aug 19 12:18:18 2016  106 s  315 msgs left
+msg INBOX.Deleted Items/579 {2486}          copied to Deleted Items/3227       2.98 msgs/s  20.957 KiB/s  ETA: Fri Aug 19 12:18:18 2016  105 s  314 msgs left
+msg INBOX.Deleted Items/580 {2457}          copied to Deleted Items/3228       2.98 msgs/s  20.939 KiB/s  ETA: Fri Aug 19 12:18:18 2016  105 s  313 msgs left
+msg INBOX.Deleted Items/581 {2958}          copied to Deleted Items/3229       2.98 msgs/s  20.926 KiB/s  ETA: Fri Aug 19 12:18:18 2016  105 s  312 msgs left
+msg INBOX.Deleted Items/582 {1439}          copied to Deleted Items/3230       2.98 msgs/s  20.904 KiB/s  ETA: Fri Aug 19 12:18:18 2016  104 s  311 msgs left
+msg INBOX.Deleted Items/583 {3266}          copied to Deleted Items/3232       2.98 msgs/s  20.892 KiB/s  ETA: Fri Aug 19 12:18:18 2016  104 s  310 msgs left
+msg INBOX.Deleted Items/584 {2774}          copied to Deleted Items/3233       2.98 msgs/s  20.867 KiB/s  ETA: Fri Aug 19 12:18:18 2016  104 s  309 msgs left
+msg INBOX.Deleted Items/585 {2443}          copied to Deleted Items/3234       2.98 msgs/s  20.846 KiB/s  ETA: Fri Aug 19 12:18:18 2016  103 s  308 msgs left
+msg INBOX.Deleted Items/586 {2474}          copied to Deleted Items/3235       2.98 msgs/s  20.831 KiB/s  ETA: Fri Aug 19 12:18:18 2016  103 s  307 msgs left
+msg INBOX.Deleted Items/587 {2396}          copied to Deleted Items/3236       2.98 msgs/s  20.812 KiB/s  ETA: Fri Aug 19 12:18:18 2016  103 s  306 msgs left
+msg INBOX.Deleted Items/588 {2859}          copied to Deleted Items/3237       2.98 msgs/s  20.797 KiB/s  ETA: Fri Aug 19 12:18:18 2016  102 s  305 msgs left
+msg INBOX.Deleted Items/589 {2439}          copied to Deleted Items/3238       2.99 msgs/s  20.780 KiB/s  ETA: Fri Aug 19 12:18:18 2016  102 s  304 msgs left
+msg INBOX.Deleted Items/590 {2548}          copied to Deleted Items/3239       2.99 msgs/s  20.764 KiB/s  ETA: Fri Aug 19 12:18:18 2016  101 s  303 msgs left
+msg INBOX.Deleted Items/591 {2441}          copied to Deleted Items/3240       2.99 msgs/s  20.742 KiB/s  ETA: Fri Aug 19 12:18:18 2016  101 s  302 msgs left
+msg INBOX.Deleted Items/592 {1505}          copied to Deleted Items/3242       2.99 msgs/s  20.720 KiB/s  ETA: Fri Aug 19 12:18:17 2016  101 s  301 msgs left
+msg INBOX.Deleted Items/593 {11250}         copied to Deleted Items/3244       2.99 msgs/s  20.738 KiB/s  ETA: Fri Aug 19 12:18:18 2016  100 s  300 msgs left
+msg INBOX.Deleted Items/594 {2531}          copied to Deleted Items/3246       2.99 msgs/s  20.723 KiB/s  ETA: Fri Aug 19 12:18:17 2016  100 s  299 msgs left
+msg INBOX.Deleted Items/595 {2562}          copied to Deleted Items/3247       2.99 msgs/s  20.706 KiB/s  ETA: Fri Aug 19 12:18:17 2016  100 s  298 msgs left
+msg INBOX.Deleted Items/596 {1503}          copied to Deleted Items/3248       2.99 msgs/s  20.684 KiB/s  ETA: Fri Aug 19 12:18:17 2016  99 s  297 msgs left
+msg INBOX.Deleted Items/597 {2691}          copied to Deleted Items/3249       2.99 msgs/s  20.668 KiB/s  ETA: Fri Aug 19 12:18:17 2016  99 s  296 msgs left
+msg INBOX.Deleted Items/598 {2446}          copied to Deleted Items/3250       2.99 msgs/s  20.652 KiB/s  ETA: Fri Aug 19 12:18:17 2016  99 s  295 msgs left
+msg INBOX.Deleted Items/599 {2524}          copied to Deleted Items/3251       2.99 msgs/s  20.637 KiB/s  ETA: Fri Aug 19 12:18:17 2016  98 s  294 msgs left
+msg INBOX.Deleted Items/600 {2432}          copied to Deleted Items/3252       2.99 msgs/s  20.621 KiB/s  ETA: Fri Aug 19 12:18:17 2016  98 s  293 msgs left
+msg INBOX.Deleted Items/601 {2410}          copied to Deleted Items/3253       2.99 msgs/s  20.604 KiB/s  ETA: Fri Aug 19 12:18:17 2016  98 s  292 msgs left
+msg INBOX.Deleted Items/602 {2515}          copied to Deleted Items/3254       2.99 msgs/s  20.586 KiB/s  ETA: Fri Aug 19 12:18:17 2016  97 s  291 msgs left
+msg INBOX.Deleted Items/603 {2444}          copied to Deleted Items/3255       2.99 msgs/s  20.570 KiB/s  ETA: Fri Aug 19 12:18:17 2016  97 s  290 msgs left
+msg INBOX.Deleted Items/604 {2449}          copied to Deleted Items/3256       2.99 msgs/s  20.554 KiB/s  ETA: Fri Aug 19 12:18:17 2016  97 s  289 msgs left
+msg INBOX.Deleted Items/605 {1604}          copied to Deleted Items/3257       3.00 msgs/s  20.535 KiB/s  ETA: Fri Aug 19 12:18:17 2016  96 s  288 msgs left
+msg INBOX.Deleted Items/606 {2470}          copied to Deleted Items/3259       3.00 msgs/s  20.519 KiB/s  ETA: Fri Aug 19 12:18:17 2016  96 s  287 msgs left
+msg INBOX.Deleted Items/607 {2572}          copied to Deleted Items/3260       3.00 msgs/s  20.504 KiB/s  ETA: Fri Aug 19 12:18:16 2016  95 s  286 msgs left
+msg INBOX.Deleted Items/608 {1566}          copied to Deleted Items/3261       3.00 msgs/s  20.484 KiB/s  ETA: Fri Aug 19 12:18:16 2016  95 s  285 msgs left
+msg INBOX.Deleted Items/609 {2442}          copied to Deleted Items/3263       3.00 msgs/s  20.467 KiB/s  ETA: Fri Aug 19 12:18:16 2016  95 s  284 msgs left
+msg INBOX.Deleted Items/610 {2417}          copied to Deleted Items/3264       3.00 msgs/s  20.425 KiB/s  ETA: Fri Aug 19 12:18:17 2016  94 s  283 msgs left
+msg INBOX.Deleted Items/611 {2444}          copied to Deleted Items/3265       3.00 msgs/s  20.409 KiB/s  ETA: Fri Aug 19 12:18:17 2016  94 s  282 msgs left
+msg INBOX.Deleted Items/612 {2455}          copied to Deleted Items/3266       3.00 msgs/s  20.393 KiB/s  ETA: Fri Aug 19 12:18:16 2016  94 s  281 msgs left
+msg INBOX.Deleted Items/613 {2477}          copied to Deleted Items/3267       3.00 msgs/s  20.377 KiB/s  ETA: Fri Aug 19 12:18:16 2016  93 s  280 msgs left
+msg INBOX.Deleted Items/614 {1502}          copied to Deleted Items/3268       3.00 msgs/s  20.358 KiB/s  ETA: Fri Aug 19 12:18:16 2016  93 s  279 msgs left
+msg INBOX.Deleted Items/615 {2391}          copied to Deleted Items/3270       3.00 msgs/s  20.341 KiB/s  ETA: Fri Aug 19 12:18:16 2016  93 s  278 msgs left
+msg INBOX.Deleted Items/616 {2182}          copied to Deleted Items/3271       3.00 msgs/s  20.323 KiB/s  ETA: Fri Aug 19 12:18:16 2016  92 s  277 msgs left
+msg INBOX.Deleted Items/617 {2760}          copied to Deleted Items/3273       3.00 msgs/s  20.309 KiB/s  ETA: Fri Aug 19 12:18:16 2016  92 s  276 msgs left
+msg INBOX.Deleted Items/618 {2516}          copied to Deleted Items/3274       3.00 msgs/s  20.294 KiB/s  ETA: Fri Aug 19 12:18:16 2016  92 s  275 msgs left
+msg INBOX.Deleted Items/619 {2514}          copied to Deleted Items/3275       3.00 msgs/s  20.278 KiB/s  ETA: Fri Aug 19 12:18:16 2016  91 s  274 msgs left
+msg INBOX.Deleted Items/620 {2439}          copied to Deleted Items/3276       3.00 msgs/s  20.263 KiB/s  ETA: Fri Aug 19 12:18:16 2016  91 s  273 msgs left
+msg INBOX.Deleted Items/621 {2522}          copied to Deleted Items/3277       3.00 msgs/s  20.248 KiB/s  ETA: Fri Aug 19 12:18:16 2016  91 s  272 msgs left
+msg INBOX.Deleted Items/622 {2448}          copied to Deleted Items/3278       3.00 msgs/s  20.234 KiB/s  ETA: Fri Aug 19 12:18:16 2016  90 s  271 msgs left
+msg INBOX.Deleted Items/623 {2476}          copied to Deleted Items/3279       3.00 msgs/s  20.218 KiB/s  ETA: Fri Aug 19 12:18:16 2016  90 s  270 msgs left
+msg INBOX.Deleted Items/624 {3210}          copied to Deleted Items/3280       3.00 msgs/s  20.207 KiB/s  ETA: Fri Aug 19 12:18:16 2016  90 s  269 msgs left
+msg INBOX.Deleted Items/625 {2417}          copied to Deleted Items/3281       3.01 msgs/s  20.188 KiB/s  ETA: Fri Aug 19 12:18:16 2016  89 s  268 msgs left
+msg INBOX.Deleted Items/626 {2441}          copied to Deleted Items/3282       3.01 msgs/s  20.174 KiB/s  ETA: Fri Aug 19 12:18:16 2016  89 s  267 msgs left
+msg INBOX.Deleted Items/627 {2475}          copied to Deleted Items/3283       3.01 msgs/s  20.160 KiB/s  ETA: Fri Aug 19 12:18:15 2016  88 s  266 msgs left
+msg INBOX.Deleted Items/628 {2613}          copied to Deleted Items/3284       3.01 msgs/s  20.145 KiB/s  ETA: Fri Aug 19 12:18:15 2016  88 s  265 msgs left
+msg INBOX.Deleted Items/629 {2445}          copied to Deleted Items/3285       3.01 msgs/s  20.131 KiB/s  ETA: Fri Aug 19 12:18:15 2016  88 s  264 msgs left
+msg INBOX.Deleted Items/630 {2602}          copied to Deleted Items/3286       3.01 msgs/s  20.117 KiB/s  ETA: Fri Aug 19 12:18:15 2016  87 s  263 msgs left
+msg INBOX.Deleted Items/631 {2390}          copied to Deleted Items/3287       3.01 msgs/s  20.101 KiB/s  ETA: Fri Aug 19 12:18:15 2016  87 s  262 msgs left
+msg INBOX.Deleted Items/632 {2397}          copied to Deleted Items/3288       3.01 msgs/s  20.086 KiB/s  ETA: Fri Aug 19 12:18:15 2016  87 s  261 msgs left
+msg INBOX.Deleted Items/633 {2743}          copied to Deleted Items/3289       3.01 msgs/s  20.072 KiB/s  ETA: Fri Aug 19 12:18:15 2016  86 s  260 msgs left
+msg INBOX.Deleted Items/634 {2464}          copied to Deleted Items/3290       3.01 msgs/s  20.057 KiB/s  ETA: Fri Aug 19 12:18:15 2016  86 s  259 msgs left
+msg INBOX.Deleted Items/635 {2615}          copied to Deleted Items/3291       3.01 msgs/s  20.043 KiB/s  ETA: Fri Aug 19 12:18:15 2016  86 s  258 msgs left
+msg INBOX.Deleted Items/636 {2414}          copied to Deleted Items/3292       3.01 msgs/s  20.028 KiB/s  ETA: Fri Aug 19 12:18:15 2016  85 s  257 msgs left
+[INBOX.Deleted Messages]            -> [Deleted Messages]                 
+[INBOX.Drafts]                      -> [Drafts]                           
+Host1 uid 1 no header by parse_headers so taking whole header with BODY.PEEK[HEADER]
+Host1 INBOX.Drafts/1 size 30767 ignored (no wanted headers so we ignore this message. To solve this: use --addheader)
+[INBOX.Emailed Contacts]            -> [Emailed Contacts]                 
+Host2 uid 287 no header by parse_headers so taking whole header with BODY.PEEK[HEADER]
+Host2 Emailed Contacts/287 size 324 ignored (no wanted headers so we ignore this message)
+Host2 uid 560 no header by parse_headers so taking whole header with BODY.PEEK[HEADER]
+Host2 Emailed Contacts/560 size 353 ignored (no wanted headers so we ignore this message)
+Host2 uid 559 no header by parse_headers so taking whole header with BODY.PEEK[HEADER]
+Host2 Emailed Contacts/559 size 348 ignored (no wanted headers so we ignore this message)
+[INBOX.Junk]                        -> [Junk]                             
+[INBOX.Sent]                        -> [Sent]                             
+[INBOX.Trash]                       -> [Trash]                            
+Host2 folder Trash selected: 780 messages,  duplicates: 60
+[INBOX.spam]                        -> [spam]                             
+++++ End looping on each folder
+++++ Calculating sizes on Host1
+Host1 folder [INBOX]                             Size:   2989721 Messages:    44 Biggest:   1344840
+Host1 folder [INBOX.Chats]                       Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Contacts]                    Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Deleted Items]               Size:   1605212 Messages:   636 Biggest:     20590
+Host1 folder [INBOX.Deleted Messages]            Size:     19737 Messages:     2 Biggest:     10885
+Host1 folder [INBOX.Drafts]                      Size:     35504 Messages:     3 Biggest:     30767
+Host1 folder [INBOX.Emailed Contacts]            Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Junk]                        Size:         0 Messages:     0 Biggest:         0
+Host1 folder [INBOX.Sent]                        Size:  12828757 Messages:   207 Biggest:   7450014
+Host1 folder [INBOX.Trash]                       Size:   1042815 Messages:    45 Biggest:     65537
+Host1 folder [INBOX.spam]                        Size:         0 Messages:     0 Biggest:         0
+Host1 Nb messages:             937 messages
+Host1 Total size:         18521746 bytes (17.664 MiB)
+Host1 Biggest message:     7450014 bytes (7.105 MiB)
+Host1 Time spent:              2.9 seconds
+++++ Calculating sizes on Host2
+Host2 folder [Chats]                             Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Contacts]                          Size:       337 Messages:     1 Biggest:       337
+Host2 folder [Deleted Items]                     Size:   1605212 Messages:   636 Biggest:     20590
+Host2 folder [Deleted Messages]                  Size:     19737 Messages:     2 Biggest:     10885
+Host2 folder [Drafts]                            Size:      4737 Messages:     2 Biggest:      3936
+Host2 folder [Emailed Contacts]                  Size:      1025 Messages:     3 Biggest:       353
+Host2 folder [INBOX]                             Size:   2989721 Messages:    44 Biggest:   1344840
+Host2 folder [Junk]                              Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Sent]                              Size:  15193634 Messages:   210 Biggest:   7450014
+Host2 folder [Trash]                             Size:   9791479 Messages:   780 Biggest:   1344840
+Host2 folder [spam]                              Size:         0 Messages:     0 Biggest:         0
+Host2 Nb messages:            1678 messages
+Host2 Total size:         29605882 bytes (28.234 MiB)
+Host2 Biggest message:     7450014 bytes (7.105 MiB)
+Host2 Time spent:              3.8 seconds
+++++ Statistics
+Transfer started on               : Fri Aug 19 12:12:59 2016
+Transfer ended on                 : Fri Aug 19 12:17:03 2016
+Transfer time                     : 244.3 sec
+Messages transferred              : 665 
+Messages skipped                  : 272
+Messages found duplicate on host1 : 0
+Messages found duplicate on host2 : 60
+Messages void (noheader) on host1 : 1
+Messages void (noheader) on host2 : 4
+Messages deleted on host1         : 0
+Messages deleted on host2         : 0
+Total bytes transferred           : 4526632 (4.317 MiB)
+Total bytes duplicate host1       : 0 (0.000 KiB)
+Total bytes duplicate host2       : 4184768 (3.991 MiB)
+Total bytes skipped               : 13995114 (13.347 MiB)
+Total bytes error                 : 0 (0.000 KiB)
+Message rate                      : 2.7 messages/s
+Average bandwidth rate            : 18.1 KiB/s
+Reconnections to host1            : 0
+Reconnections to host2            : 0
+Memory consumption                : 96.0 MiB
+Biggest message                   : 1344840 bytes
+Initial difference host2 - host1  : 76 messages, 6557504 bytes (6.254 MiB)
+Final   difference host2 - host1  : 741 messages, 11084136 bytes (10.571 MiB)
+Detected 0 errors
+
+
+Homepage: http://imapsync.lamiral.info/
+Log file is LOG_imapsync/2016_08_19_12_12_59_test@taylorprops.com.txt

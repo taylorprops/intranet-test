@@ -1,0 +1,189 @@
+Transfer started at Fri Aug 19 10:53:37 2016
+PID is 15804
+Log file is LOG_imapsync/2016_08_19_10_53_37_test@taylorprops.com.txt
+$RCSfile: imapsync,v $ $Revision: 1.592 $ $Date: 2014/05/22 10:03:17 $ 
+Here is a [linux] system (Linux websvr 3.13.0-77-generic #121-Ubuntu SMP Wed Jan 20 10:50:42 UTC 2016 x86_64)
+With perl 5.18.2 Mail::IMAPClient  3.35
+Command line used:
+/usr/bin/imapsync --host1 imap.mris.com --user1 miketaylor@mris.com --password1 MASKED --host2 mail.tpmailserver.com --user2 test@taylorprops.com --password2 MASKED
+Temp directory is /tmp
+PID file is /tmp/imapsync.pid
+Modules version list:
+Mail::IMAPClient     3.35
+IO::Socket           1.36
+IO::Socket::IP       ?
+IO::Socket::INET     1.33
+IO::Socket::SSL      1.965
+Net::SSLeay          1.58
+Digest::MD5          2.52
+Digest::HMAC_MD5     1.01
+Digest::HMAC_SHA1    1.03
+Term::ReadKey        2.31
+Authen::NTLM         ?
+File::Spec           3.40
+Time::HiRes          1.9725
+URI::Escape          3.31
+Data::Uniqid         ?
+
+Info: turned ON syncinternaldates, will set the internal dates (arrival dates) on host2 same as host1.
+Info: will try to use LOGIN authentication on host1
+Info: will try to use LOGIN authentication on host2
+Info: imap connexions timeout is 120 seconds
+Host1: IMAP server [imap.mris.com] port [143] user [miketaylor@mris.com]
+Host2: IMAP server [mail.tpmailserver.com] port [143] user [test@taylorprops.com]
+Host1: * OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE STARTTLS AUTH=PLAIN AUTH=TOKEN] Server ready proxy14.mail.iad3a.rsapps.net
+Host1: imap.mris.com says it has NO CAPABILITY for AUTHENTICATE LOGIN
+Host1: success login on [imap.mris.com] with user [miketaylor@mris.com] auth [LOGIN]
+Host2: * OK mail.tpmailserver.com Zimbra IMAP4rev1 server ready
+Host2: mail.tpmailserver.com says it has NO CAPABILITY for AUTHENTICATE LOGIN
+Host2: success login on [mail.tpmailserver.com] with user [test@taylorprops.com] auth [LOGIN]
+Host1: state Authenticated
+Host2: state Authenticated
+Host1 capability: IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS THREAD=ORDEREDSUBJECT MULTIAPPEND URL-PARTIAL CATENATE UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS BINARY MOVE QUOTA
+Host2 capability: IMAP4rev1 ACL BINARY CATENATE CHILDREN CONDSTORE ENABLE ESEARCH ESORT I18NLEVEL=1 ID IDLE LIST-EXTENDED LIST-STATUS LITERAL+ LOGIN-REFERRALS MULTIAPPEND NAMESPACE QRESYNC QUOTA RIGHTS=ektx SASL-IR SEARCHRES SORT THREAD=ORDEREDSUBJECT UIDPLUS UNSELECT WITHIN XLIST
+Host1: separator given by NAMESPACE: [.]
+Host2: separator given by NAMESPACE: [/]
+Host1: prefix given by NAMESPACE: [INBOX.]
+Host2: prefix given by NAMESPACE: []
+Host1 separator and prefix: [.][INBOX.]
+Host2 separator and prefix: [/][]
+++++ Calculating sizes on Host1
+Host1 folder [INBOX]                             Size:   2078954 Messages:    27 Biggest:   1344840
+Host1 folder [INBOX.Drafts]                      Size:     30767 Messages:     1 Biggest:     30767
+Host1 folder [INBOX.Sent]                        Size:       722 Messages:     2 Biggest:       368
+Host1 folder [INBOX.Trash]                       Size:   1042815 Messages:    45 Biggest:     65537
+Host1 folder [INBOX.spam]                        Size:         0 Messages:     0 Biggest:         0
+Host1 Nb messages:              75 messages
+Host1 Total size:          3153258 bytes (3.007 MiB)
+Host1 Biggest message:     1344840 bytes (1.283 MiB)
+Host1 Time spent:              1.7 seconds
+++++ Calculating sizes on Host2
+Host2 folder [Drafts]                            Size:         0 Messages:     0 Biggest:         0
+Host2 folder [INBOX]                             Size:         0 Messages:     0 Biggest:         0
+Host2 folder [Sent]                              Size:   2365599 Messages:     5 Biggest:   1255840
+Host2 folder [Trash]                             Size:   3178090 Messages:    85 Biggest:   1344840
+Host2 folder [spam]                              Size:         0 Messages:     0 Biggest:         0
+Host2 Nb messages:              90 messages
+Host2 Total size:          5543689 bytes (5.287 MiB)
+Host2 Biggest message:     1344840 bytes (1.283 MiB)
+Host2 Time spent:              0.9 seconds
+++++ Listing folders
+Host1 folders list:
+[INBOX]
+[INBOX.Drafts]
+[INBOX.Sent]
+[INBOX.Trash]
+[INBOX.spam]
+
+Host2 folders list:
+[Chats]
+[Comments]
+[Contacts]
+[Drafts]
+[Emailed Contacts]
+[INBOX]
+[INBOX/folder2]
+[INBOX/folder2/subfolder]
+[Junk]
+[Sent]
+[Trash]
+[Trash/folder2]
+[spam]
+
+Folders in host2 not in host1:
+[Trash/folder2]
+[Junk]
+[INBOX/folder2/subfolder]
+[INBOX/folder2]
+[Emailed Contacts]
+[Contacts]
+[Comments]
+[Chats]
+
+++++ Looping on each folder
+[INBOX]                             -> [INBOX]                            
+msg INBOX/48 {1344840}        copied to INBOX/844        0.60 msgs/s  793.157 KiB/s  ETA: Fri Aug 19 10:55:46 2016  123 s  74 msgs left
+msg INBOX/49 {20325}          copied to INBOX/846        1.04 msgs/s  696.291 KiB/s  ETA: Fri Aug 19 10:54:53 2016  70 s  73 msgs left
+msg INBOX/50 {8126}           copied to INBOX/847        1.37 msgs/s  613.440 KiB/s  ETA: Fri Aug 19 10:54:36 2016  52 s  72 msgs left
+msg INBOX/51 {21392}          copied to INBOX/849        1.59 msgs/s  542.899 KiB/s  ETA: Fri Aug 19 10:54:28 2016  45 s  71 msgs left
+msg INBOX/52 {3947}           copied to INBOX/851        1.81 msgs/s  493.570 KiB/s  ETA: Fri Aug 19 10:54:23 2016  39 s  70 msgs left
+msg INBOX/53 {12644}          copied to INBOX/853        1.94 msgs/s  445.418 KiB/s  ETA: Fri Aug 19 10:54:20 2016  36 s  69 msgs left
+msg INBOX/54 {24037}          copied to INBOX/855        2.04 msgs/s  408.927 KiB/s  ETA: Fri Aug 19 10:54:18 2016  33 s  68 msgs left
+msg INBOX/55 {24223}          copied to INBOX/856        2.14 msgs/s  380.459 KiB/s  ETA: Fri Aug 19 10:54:17 2016  31 s  67 msgs left
+msg INBOX/56 {23625}          copied to INBOX/858        2.20 msgs/s  353.379 KiB/s  ETA: Fri Aug 19 10:54:16 2016  30 s  66 msgs left
+msg INBOX/57 {22047}          copied to INBOX/860        2.28 msgs/s  334.826 KiB/s  ETA: Fri Aug 19 10:54:14 2016  29 s  65 msgs left
+msg INBOX/58 {27301}          copied to INBOX/861        2.33 msgs/s  317.575 KiB/s  ETA: Fri Aug 19 10:54:14 2016  27 s  64 msgs left
+msg INBOX/59 {7952}           copied to INBOX/863        2.31 msgs/s  289.126 KiB/s  ETA: Fri Aug 19 10:54:14 2016  27 s  63 msgs left
+msg INBOX/60 {3312}           copied to INBOX/865        2.38 msgs/s  275.608 KiB/s  ETA: Fri Aug 19 10:54:13 2016  26 s  62 msgs left
+msg INBOX/61 {3429}           copied to INBOX/867        2.45 msgs/s  264.458 KiB/s  ETA: Fri Aug 19 10:54:12 2016  25 s  61 msgs left
+msg INBOX/62 {8762}           copied to INBOX/869        2.50 msgs/s  253.695 KiB/s  ETA: Fri Aug 19 10:54:11 2016  24 s  60 msgs left
+msg INBOX/63 {7878}           copied to INBOX/871        2.55 msgs/s  243.302 KiB/s  ETA: Fri Aug 19 10:54:11 2016  23 s  59 msgs left
+msg INBOX/64 {8010}           copied to INBOX/872        2.57 msgs/s  232.248 KiB/s  ETA: Fri Aug 19 10:54:11 2016  23 s  58 msgs left
+msg INBOX/65 {8134}           copied to INBOX/873        2.61 msgs/s  223.595 KiB/s  ETA: Fri Aug 19 10:54:10 2016  22 s  57 msgs left
+msg INBOX/66 {67966}          copied to INBOX/874        2.56 msgs/s  216.425 KiB/s  ETA: Fri Aug 19 10:54:11 2016  22 s  56 msgs left
+msg INBOX/67 {67966}          copied to INBOX/875        2.53 msgs/s  212.231 KiB/s  ETA: Fri Aug 19 10:54:11 2016  22 s  55 msgs left
+msg INBOX/68 {67980}          copied to INBOX/876        2.52 msgs/s  208.966 KiB/s  ETA: Fri Aug 19 10:54:11 2016  21 s  54 msgs left
+msg INBOX/69 {87628}          copied to INBOX/877        2.48 msgs/s  206.407 KiB/s  ETA: Fri Aug 19 10:54:12 2016  21 s  53 msgs left
+msg INBOX/70 {11694}          copied to INBOX/878        2.53 msgs/s  202.133 KiB/s  ETA: Fri Aug 19 10:54:11 2016  21 s  52 msgs left
+msg INBOX/71 {26952}          copied to INBOX/879        2.55 msgs/s  197.933 KiB/s  ETA: Fri Aug 19 10:54:11 2016  20 s  51 msgs left
+msg INBOX/72 {52650}          copied to INBOX/881        2.54 msgs/s  194.592 KiB/s  ETA: Fri Aug 19 10:54:11 2016  20 s  50 msgs left
+msg INBOX/73 {53018}          copied to INBOX/883        2.54 msgs/s  192.190 KiB/s  ETA: Fri Aug 19 10:54:11 2016  19 s  49 msgs left
+msg INBOX/74 {63116}          copied to INBOX/885        2.53 msgs/s  190.427 KiB/s  ETA: Fri Aug 19 10:54:11 2016  19 s  48 msgs left
+[INBOX.Drafts]                      -> [Drafts]                           
+Host1 uid 1 no header by parse_headers so taking whole header with BODY.PEEK[HEADER]
+Host1 INBOX.Drafts/1 size 30767 ignored (no wanted headers so we ignore this message. To solve this: use --addheader)
+[INBOX.Sent]                        -> [Sent]                             
+[INBOX.Trash]                       -> [Trash]                            
+Host2 folder Trash selected: 85 messages,  duplicates: 6
+[INBOX.spam]                        -> [spam]                             
+++++ End looping on each folder
+++++ Calculating sizes on Host1
+Host1 folder [INBOX]                             Size:   2078954 Messages:    27 Biggest:   1344840
+Host1 folder [INBOX.Drafts]                      Size:     30767 Messages:     1 Biggest:     30767
+Host1 folder [INBOX.Sent]                        Size:       722 Messages:     2 Biggest:       368
+Host1 folder [INBOX.Trash]                       Size:   1042815 Messages:    45 Biggest:     65537
+Host1 folder [INBOX.spam]                        Size:         0 Messages:     0 Biggest:         0
+Host1 Nb messages:              75 messages
+Host1 Total size:          3153258 bytes (3.007 MiB)
+Host1 Biggest message:     1344840 bytes (1.283 MiB)
+Host1 Time spent:              0.6 seconds
+++++ Calculating sizes on Host2
+Host2 folder [Drafts]                            Size:         0 Messages:     0 Biggest:         0
+Host2 folder [INBOX]                             Size:   2078954 Messages:    27 Biggest:   1344840
+Host2 folder [Sent]                              Size:   2365599 Messages:     5 Biggest:   1255840
+Host2 folder [Trash]                             Size:   3178090 Messages:    85 Biggest:   1344840
+Host2 folder [spam]                              Size:         0 Messages:     0 Biggest:         0
+Host2 Nb messages:             117 messages
+Host2 Total size:          7622643 bytes (7.270 MiB)
+Host2 Biggest message:     1344840 bytes (1.283 MiB)
+Host2 Time spent:              1.1 seconds
+++++ Statistics
+Transfer started on               : Fri Aug 19 10:53:37 2016
+Transfer ended on                 : Fri Aug 19 10:53:56 2016
+Transfer time                     : 19.2 sec
+Messages transferred              : 27 
+Messages skipped                  : 48
+Messages found duplicate on host1 : 0
+Messages found duplicate on host2 : 6
+Messages void (noheader) on host1 : 1
+Messages void (noheader) on host2 : 0
+Messages deleted on host1         : 0
+Messages deleted on host2         : 0
+Total bytes transferred           : 2078954 (1.983 MiB)
+Total bytes duplicate host1       : 0 (0.000 KiB)
+Total bytes duplicate host2       : 26860 (26.230 KiB)
+Total bytes skipped               : 1074304 (1.025 MiB)
+Total bytes error                 : 0 (0.000 KiB)
+Message rate                      : 1.4 messages/s
+Average bandwidth rate            : 106.0 KiB/s
+Reconnections to host1            : 0
+Reconnections to host2            : 0
+Memory consumption                : 91.1 MiB
+Biggest message                   : 1344840 bytes
+Initial difference host2 - host1  : 15 messages, 2390431 bytes (2.280 MiB)
+Final   difference host2 - host1  : 42 messages, 4469385 bytes (4.262 MiB)
+Detected 0 errors
+
+
+Homepage: http://imapsync.lamiral.info/
+Log file is LOG_imapsync/2016_08_19_10_53_37_test@taylorprops.com.txt
